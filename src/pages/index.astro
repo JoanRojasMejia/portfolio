@@ -7,10 +7,6 @@ import RowLink from '../icons/row-link.astro'
 import MainLayout from '../layouts/MainLayout.astro'
 import Mail from '../icons/mail.astro'
 import Linkedin from '../icons/linkedin.astro'
-
-// import { MarqueeDemo } from '../components/prueba'
-// import Layout from '../layouts/Layout.astro'
-// import NavBar from '../components/navbar.astro'
 ---
 
 <MainLayout>
@@ -34,7 +30,6 @@ import Linkedin from '../icons/linkedin.astro'
             <RowLink />
           </span>
         </a>
-        <!-- <div class="text-sm text-gray-500 dark:text-gray-400">Joined in August 2014</div> -->
       </div>
     </section>
     <section class="pt-8">
@@ -64,11 +59,15 @@ import Linkedin from '../icons/linkedin.astro'
     <section class="pt-5">
       <div class="flex flex-col items-center justify-center">
         <div class="relative grid gap-[14px] mt-[6px] p-1 grid-cols-3 scale-[1.04]">
-          {projects.map((project) => <CardProject project={project} />)}
+          {
+            projects
+              .toSpliced(6, 6)
+              .map((project) => <CardProject project={project} isPageWork={false} />)
+          }
         </div>
       </div>
     </section>
-    <section class="mt-11 mb-40">
+    <section class="mt-11">
       <div class="bg-hover-background flex rounded-[20px] items-center p-4">
         <div class="p-8 z-10">
           <h2
@@ -87,9 +86,10 @@ import Linkedin from '../icons/linkedin.astro'
               hi@joan.me
             </a>
             <a
-              href="https://twitter.com/@realvjy"
+              href="https://www.linkedin.com/in/joan-rojas-mejia/"
               class="flex items-center gap-2 font-medium bg-repeat bg-clip-text bg-100% bg-text-gradient text-[var(--retro-2c)]"
               style="-webkit-text-fill-color:transparent"
+              target="_blank"
             >
               <Linkedin />
               Joan Rojas
@@ -98,18 +98,25 @@ import Linkedin from '../icons/linkedin.astro'
           <p class="my-5 font-normal text-xl tracking-[-0.3px] opacity-80 max-w-80">
             Want to create something awesome? Or, you have any query? Drop an email or tweet.
           </p>
-          <div class="sc-8ee31b1f-14 eKRTPi design">
-            <ul>
-              <li>
-                <a href="https://airtable.com/shrbOEuombdqwlRUp" class="design-pur">
-                  Send Design Proposal</a
-                >
-              </li>
-            </ul>
+          <div class="text-left justify-start">
+            <span class="flex">
+              <a
+                href="https://airtable.com/shrbOEuombdqwlRUp"
+                class="rounded-[18px] flex items-center font-medium text-base relative bg-dream-gradient py-2 px-5 leading-5 hover:opacity-80 transition-all duration-300"
+              >
+                Contact me
+              </a>
+            </span>
           </div>
         </div>
         <div class="text-right z-auto">
-          <img class="h-72 -m-2 scale-[1.2] translate-y-[18px]" src="/chat.png" />
+          <Image
+            alt={'chat'}
+            src="/chat.png"
+            width="150"
+            height="150"
+            class="size-72 -m-2 scale-[1.2] translate-y-[18px]"
+          />
         </div>
       </div>
     </section>

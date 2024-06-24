@@ -4,82 +4,51 @@ import type { Project } from '../content/projects'
 
 interface Props {
   project: Project
+  isPageWork: boolean
 }
 
-const { project } = Astro.props
-const { title, description, image, id, link, tags } = project
+const { project, isPageWork } = Astro.props
+const { title, description, image, id, state, year } = project
 ---
 
 <article>
-  <a href={link} target="_blank" rel="noreferrer"
-    ><div
+  <a href={`/work/${id}`} rel="noreferrer" transition:name=`project ${id} box`>
+    <div
       class="mb-3 relative cursor-pointer p-3 rounded-[20px] before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
       hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 before:hover:bg-hover-background"
     >
-      <div class="w-full relative rounded-xl">
+      <div class="w-full relative">
+        <Image
+          alt={`project-${id}`}
+          transition:name=`project ${id} image`
+          src={image}
+          width="150"
+          height="150"
+          loading="eager"
+          class="object-cover w-[200px] h-[200px] rounded-xl"
+        /><noscript></noscript>
         <span
-          class="rounded-xl"
-          style="
-            box-sizing: border-box;
-            display: inline-block;
-            overflow: hidden;
-            width: initial;
-            height: initial;
-            background: none;
-            opacity: 1;
-            border: 0px;
-            margin: 0px;
-            padding: 0px;
-            position: relative;
-            max-width: 100%;
-          "
-          ><span
-            style="
-              box-sizing: border-box;
-              display: block;
-              width: initial;
-              height: initial;
-              background: none;
-              opacity: 1;
-              border: 0px;
-              margin: 0px;
-              padding: 0px;
-              max-width: 100%;
-            "
-            ><img
-              alt=""
-              aria-hidden="true"
-              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27400%27%20height=%27400%27/%3e"
-              style="
-                display: block;
-                max-width: 100%;
-                width: initial;
-                height: initial;
-                background: none;
-                opacity: 1;
-                border: 0px;
-                margin: 0px;
-                padding: 0px;
-              "
-            /></span
-          ><Image
-            alt={`project-${id}`}
-            src={image}
-            width="150"
-            height="150"
-            loading="eager"
-            style="position: absolute; inset: 0px;box-sizing: border-box;padding: 0px; border: none;margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            class="object-cover"
-          /><noscript></noscript></span
+          class={`absolute top-0 ml-2 mt-2 uppercase font-bold py-[1px] px-[6px]
+          ${state === 'private' ? 'bg-rose-700' : 'bg-teal-700'} text-white rounded-[9px] text-[10px]`}
         >
-        <!-- <div class="sc-8ee31b1f-4 ePsxYh pink onimage">update</div> -->
+          {state}
+        </span>
       </div>
       <div class="flex flex-col mt-[6px]">
-        <h3 class="font-bold text-base flex items-center my-1 tracking-[-0.4px]">{title}</h3>
-        <p class="tracking-[-0.25px] leading-[140%] font-normal opacity-60 text-[15px]">
+        <h3
+          class="font-bold text-base flex items-center my-1 tracking-[-0.4px]"
+          transition:name=`project ${id} title`
+        >
+          {title}
+        </h3>
+        {isPageWork && <span class="text-xs font-medium my-[2px] opacity-30 uppercase">{year}</span>}
+        <p
+          class="tracking-[-0.25px] leading-[140%] font-normal opacity-60 text-[15px]"
+          transition:name=`project ${id} description`
+        >
           {description}
         </p>
       </div>
-    </div></a
-  >
+    </div>
+  </a>
 </article>

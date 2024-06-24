@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets'
+import type { Timeline } from '../content/timeline'
+
+interface Props {
+  timeline: Timeline
+}
+
+const { timeline } = Astro.props
+const { title, date, description, image, link, tags } = timeline
+---
+
+<div class="w-full relative">
+  <div class="flex justify-center text-white">
+    <div class="min-w-[100px] mr-5 -mt-1">
+      <p class="text-right text-sm font-semibold">{date}</p>
+    </div>
+    <div
+      class="w-[420px] relative pl-4 pb-12 border-l-[1px] border-[rgba(236,237,238,.15)] before:bg-violet-500 before:border
+    before:border-[rgba(236,237,238,.15)] before:block before:float-left before:size-[11px] before:absolute before:rounded-xl
+      before:left-[-6.5px] before:top-[-0.125rem]"
+    >
+      <div class="relative">
+        <a
+          href={link}
+          target="_blank"
+          class="flex flex-col p-3 translate-y-[-20px] before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
+            hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 before:hover:bg-hover-background"
+        >
+          <div>
+            <div class="flex items-center gap-[6px]">
+              {
+                tags.map((tag) => (
+                  <span class="text-[11px] font-bold rounded-[9px] py-[1px] px-[6px] text-pink-900 bg-pink-300 leading-[14px] relative">
+                    {tag}
+                  </span>
+                ))
+              }
+            </div>
+            <h3 class="text-lg font-semibold my-2">{title}</h3>
+            <p class="text-[15px] leading-[140%] tracking-[-0.18px] mb-3 opacity-90">
+              {description}
+            </p>
+          </div>
+          <div>
+            <Image class="rounded-lg" src={image} alt={title} width={420} height={210} />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

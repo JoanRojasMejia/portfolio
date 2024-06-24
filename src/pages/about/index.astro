@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets'
+import Grille from '../../icons/grille.astro'
+import MainLayout from '../../layouts/MainLayout.astro'
+---
+
+<MainLayout>
+  <div class="px-4 pt-[14px] flex flex-col justify-center">
+    <div class="relative flex flex-col mb-14">
+      <div class="text-center max-w-[500px] m-auto p-6 flex flex-col items-center">
+        <h4
+          class="inline-block text-3xl mb-3 font-bold tracking-[-1.2px] bg-repeat bg-clip-text bg-100% bg-dream-gradient"
+          style="-webkit-text-fill-color:transparent"
+        >
+          About
+        </h4>
+        <p class="text-lg tracking-[-0.28px] leading-[140%]">
+          Little about me. Also, It’s not that hard to find my contact just search joan.
+        </p>
+        <div class="flex justify-center items-center my-3">
+          <Grille className="opacity-20 scale-y-[1] scale-x-[-1]" />
+          <span class="w-max flex h-min">
+            <Image
+              loading="eager"
+              class="invert mx-6"
+              alt={'dots'}
+              src="/three-dots.svg"
+              width="35"
+              height="35"
+            />
+          </span>
+          <Grille className="opacity-20 " />
+        </div>
+      </div>
+      <section class="mt-[30px]">
+        <div class="flex w-full">
+          <Image
+            loading="eager"
+            class="rounded-lg"
+            alt={'joan photo'}
+            src="/about-1.webp"
+            width="500"
+            height="500"
+            class="rounded-lg w-full"
+          />
+        </div>
+        <div class="max-w-[500px] mx-auto mt-11">
+          <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
+            As a digital artist, I have been bringing a splash of color to the internet for years
+            through my illustrations and designs. I assist brands in developing their visual
+            identity and design language to make their products more appealing and accessible.
+            Currently, I am building design tools and resources @overlayz. In my spare time, I love
+            sharing my learnings and open-source design resources to help my fellow designers,
+            developers, and enthusiasts.
+          </p>
+          <h4
+            class="mt-[54px] opacity-70 dark:text-[var(--light-gray)] tracking-[2px] uppercase text-sm px-4 font-semibold"
+          >
+            Current
+          </h4>
+          <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
+            As a digital artist, I have been bringing a splash of color to the internet for years
+            through my illustrations and designs. I assist brands in developing their visual
+            identity and design language to make their products more appealing and accessible.
+            Currently, I am building design tools and resources @overlayz. In my spare time, I love
+            sharing my learnings and open-source design resources to help my fellow designers,
+            developers, and enthusiasts.
+          </p>
+          <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
+            As a digital artist, I have been bringing a splash of color to the internet for years
+            through my illustrations and designs. I assist brands in developing their visual
+            identity and design language to make their products more appealing and accessible.
+            Currently, I am building design tools and resources @overlayz. In my spare time, I love
+            sharing my learnings and open-source design resources to help my fellow designers,
+            developers, and enthusiasts.
+          </p>
+          <h4
+            class="mt-[54px] opacity-70 dark:text-[var(--light-gray)] tracking-[2px] uppercase text-sm px-4 font-semibold"
+          >
+            Current
+          </h4>
+          <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
+            As a digital artist, I have been bringing a splash of color to the internet for years
+            through my illustrations and designs. I assist brands in developing their visual
+            identity and design language to make their products more appealing and accessible.
+            Currently, I am building design tools and resources @overlayz. In my spare time, I love
+            sharing my learnings and open-source design resources to help my fellow designers,
+            developers, and enthusiasts.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</MainLayout>

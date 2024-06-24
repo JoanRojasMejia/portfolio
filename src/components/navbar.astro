@@ -3,79 +3,65 @@ import Instagram from '../icons/instagram.astro'
 import Twitter from '../icons/twitter.astro'
 import Moon from '../icons/moon.astro'
 import Linkedin from '../icons/linkedin.astro'
+import Github from '../icons/github.astro'
 ---
 
 <nav class="w-[708px] m-auto pt-6">
   <div
     class="backdrop-blur-2xl px-4 py-[10px] flex flex-row justify-between bg-[var(--nav-bg)] rounded-xl"
   >
-    <div class="flex items-center max-h-10 h-10">
+    <div class="flex items-center max-h-10 h-10 w-full">
       <div>
         <a href="/">Joan</a>
       </div>
-      <div class="flex items-center max-h-10 ml-2 relative">
+      <div class="flex items-center max-h-10 ml-2 relative w-full justify-center">
         <ul class="m-o flex flex-row">
           <li class="relative">
-            <a href="/timeline"
-              ><span
-                class="font-semibold pl-5 bg-repeat bg-clip-text bg-100% bg-[var(--retro-2c)] bg-text-gradient"
-                style="-webkit-text-fill-color:transparent">timeline</span
-              ></a
-            >
+            <a href="/timeline">
+              <span
+                class="font-semibold px-3 bg-repeat bg-clip-text bg-100% bg-[var(--retro-2c)] bg-text-gradient"
+                style="-webkit-text-fill-color:transparent"
+              >
+                timeline
+              </span>
+            </a>
           </li>
           <li class="relative">
-            <a class="block relative px-3 text-base tracking-tight font-medium" href="/work">work</a
-            >
+            <a class="block relative px-3 text-base tracking-tight font-medium" href="/work">
+              work
+            </a>
           </li>
           <li class="relative">
             <a class="block relative px-3 text-base tracking-tight font-medium" href="/about"
-              >about</a
-            >
+              >about
+            </a>
           </li>
           <li class="relative">
-            <a class="block relative px-3 text-base tracking-tight font-medium" href="/story"
-              >story</a
-            >
+            <a class="block relative px-3 text-base tracking-tight font-medium" href="/stack/grid"
+              >tech stack
+            </a>
           </li>
           <li class="relative">
-            <a class="block relative px-3 text-base tracking-tight font-medium" href="/links"
-              >links</a
-            >
+            <a class="block relative px-3 text-base tracking-tight font-medium" href="/bookshelf"
+              >bookshelf
+            </a>
           </li>
-          <!-- <li class="menu-items">
-          <button type="button" aria-haspopup="menu" aria-expanded="false">more</button>
-          <ul class="dropdown">
-            <li class="menu-items">
-              <a href="/thanks"><span class="">supporters</span></a>
-            </li>
-            <li class="menu-items">
-              <a href="/book"><span class="">bookshelf</span></a>
-            </li>
-            <li class="menu-items">
-              <a href="/stack"><span class="">tech stack</span></a>
-            </li>
-            <li class="menu-items">
-              <a href="/photos"><span class="">photos</span></a>
-            </li>
-            <li class="menu-items">
-              <a href="/version"><span class="">version</span></a>
-            </li>
-            <li class="menu-items">
-              <a href="/v5"><span class="">this uikit</span></a>
-            </li>
-            <li class="menu-items">
-              <a href="/nft"><span class="">NFT</span></a>
-            </li>
-          </ul>
-        </li> -->
         </ul>
       </div>
     </div>
     <div class="flex items-center max-h-10 h-10">
       <div class="flex items-center max-h-10 mr-3 border-r border-[var(--grey-100)]">
-        <a href="https://instagram.com/joan_rojas_16" class="py-[2px] px-3"><Instagram /></a>
-        <a href="https://x.com/JoanRoj18271625" class="py-[2px] px-3"><Twitter /></a>
-        <a href="https://x.com/JoanRoj18271625" class="py-[2px] px-3"><Linkedin /></a>
+        <a href="https://github.com/JoanRojasMejia" class="py-[2px] px-3" target="_blank"
+          ><Github />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/joan-rojas-mejia/"
+          target="_blank"
+          class="py-[2px] px-3"><Linkedin /></a
+        >
+        <a href="https://x.com/JoanRoj18271625" class="py-[2px] px-3" target="_blank">
+          <Twitter />
+        </a>
       </div>
       <div class="sc-481ef671-6 dZnvFc"><Moon /></div>
       <!-- <span class="sc-481ef671-8 dISDXm"></span> -->
