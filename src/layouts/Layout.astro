@@ -45,23 +45,18 @@ const { title } = Astro.props
         -webkit-font-smoothing: antialiased;
       }
 
-      #prueba {
+      #list-technologies {
         mask-image: radial-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 40%, transparent 80%);
       }
 
-      /* main::before {
-    content: '';
-    position: absolute;
-    inset: 0px;
-    z-index: -100;
-    background-image: url(/header-gradient.svg), url(/footer-gradient.svg);
-    background-repeat: no-repeat;
-    background-position:
-      center top,
-      center bottom;
-    background-size: 1400px;
-  } */
+      #book-transition {
+        transform: perspective(2000px) rotateY(-15deg) translateX(-10px) scaleX(0.94);
+      }
 
+      #book-transition:hover {
+        transform: perspective(2000px) rotateY(0deg) translateX(0px) scaleX(1);
+        transform-style: preserve-3d;
+      }
       #texture {
         filter: contrast(30%) brightness(50%);
       }

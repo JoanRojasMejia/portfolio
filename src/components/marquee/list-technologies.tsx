@@ -1,12 +1,12 @@
-import { technologies } from '../content/technologies'
-import Marquee from './marquee'
+import { technologies } from '../../content/technologies'
+import Marquee from '../magic-ui/marquee'
 import Tag from './tag'
 
-export const MarqueeDemo = () => {
+export const ListTechnologies = () => {
   return (
     <div
       className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background py-3"
-      id="prueba"
+      id="list-technologies"
     >
       <Marquee className="[--duration:70s]">
         {Object.values(technologies)

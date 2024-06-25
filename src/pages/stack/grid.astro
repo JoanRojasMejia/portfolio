@@ -5,6 +5,7 @@ import MainLayout from '../../layouts/MainLayout.astro'
 import GridIcon from '../../icons/grid-icon.astro'
 import ListIcon from '../../icons/list-icon.astro'
 import { technologiesAndFrameworks, tools, devices } from '../../content/tech-stack'
+import SquareStack from '../../components/cards/square-stack.astro'
 ---
 
 <MainLayout>
@@ -56,23 +57,7 @@ import { technologiesAndFrameworks, tools, devices } from '../../content/tech-st
           languages and frameworks
         </h4>
         <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
-          {
-            technologiesAndFrameworks.map((tech) => (
-              <div
-                class="relative cursor-pointer p-4 flex items-center before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
-                hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 before:hover:bg-hover-background"
-              >
-                <Image
-                  loading="eager"
-                  src={tech.logo}
-                  alt={tech.name}
-                  width="60"
-                  height="60"
-                  class="rounded-lg size-[60px]"
-                />
-              </div>
-            ))
-          }
+          {technologiesAndFrameworks.map((tech) => <SquareStack tech={tech} />)}
         </div>
         <h4
           class="text-center mt-10 opacity-70 dark:text-[var(--light-gray)] uppercase tracking-[2px] text-sm px-4 font-semibold"
@@ -80,23 +65,7 @@ import { technologiesAndFrameworks, tools, devices } from '../../content/tech-st
           Tools
         </h4>
         <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
-          {
-            tools.map((tool) => (
-              <div
-                class="relative cursor-pointer p-4 flex items-center before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
-                hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 before:hover:bg-hover-background"
-              >
-                <Image
-                  loading="eager"
-                  src={tool.logo}
-                  alt={tool.name}
-                  width="60"
-                  height="60"
-                  class="rounded-lg size-[60px]"
-                />
-              </div>
-            ))
-          }
+          {tools.map((tool) => <SquareStack tech={tool} />)}
         </div>
         <h4
           class="text-center mt-10 opacity-70 dark:text-[var(--light-gray)] uppercase tracking-[2px] text-sm px-4 font-semibold"
@@ -104,23 +73,7 @@ import { technologiesAndFrameworks, tools, devices } from '../../content/tech-st
           Devices
         </h4>
         <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
-          {
-            devices.map((device) => (
-              <div
-                class="relative cursor-pointer p-4 flex items-center before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
-                hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 before:hover:bg-hover-background"
-              >
-                <Image
-                  loading="eager"
-                  src={device.logo}
-                  alt={device.name}
-                  width="60"
-                  height="60"
-                  class="rounded-lg size-[60px]"
-                />
-              </div>
-            ))
-          }
+          {devices.map((device) => <SquareStack tech={device} />)}
         </div>
       </section>
     </div>
