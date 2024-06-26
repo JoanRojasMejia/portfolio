@@ -1,7 +1,9 @@
 ---
+import { BorderBeam } from '@components/magic-ui/border-beam'
+import Grille from '@icons/grille.astro'
+import MainLayout from '@layouts/MainLayout.astro'
 import { Image } from 'astro:assets'
-import Grille from '../../icons/grille.astro'
-import MainLayout from '../../layouts/MainLayout.astro'
+
 ---
 
 <MainLayout>
@@ -28,12 +30,13 @@ import MainLayout from '../../layouts/MainLayout.astro'
               width="35"
               height="35"
             />
+            
           </span>
           <Grille className="opacity-20 " />
         </div>
       </div>
       <section class="mt-[30px]">
-        <div class="flex w-full">
+        <div class="flex w-full relative rounded-lg">
           <Image
             loading="eager"
             class="rounded-lg"
@@ -43,6 +46,7 @@ import MainLayout from '../../layouts/MainLayout.astro'
             height="500"
             class="rounded-lg w-full"
           />
+          <BorderBeam size={300} duration={12} delay={9} borderWidth={2} />
         </div>
         <div class="max-w-[500px] mx-auto mt-11">
           <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">

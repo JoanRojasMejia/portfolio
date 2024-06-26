@@ -1,7 +1,23 @@
 ---
-import Grille from '../../icons/grille.astro';
+import Grille from '../../icons/grille.astro'
 
-
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+const i18n = {
+  es: {
+    timeline: 'cronología',
+    about: 'sobre mí',
+    techStack: 'tecnologías',
+    bookshelf: 'libros',
+    phrase: 'Qué basto huevón ☢︎'
+  },
+  en: {
+    timeline: 'timeline',
+    about: 'about',
+    techStack: 'tech stack',
+    bookshelf: 'bookshelf',
+    phrase: 'What a bastard weon ☢︎'
+  }
+}
 ---
 
 <section class="mt-32 flex flex-col items-center gap-2">
@@ -18,7 +34,7 @@ import Grille from '../../icons/grille.astro';
         href="/timeline"
         class="text-[13px] font-medium opacity-40 hover:opacity-85 transition-all duration-300 dark:text-[var(--light-gray)]"
       >
-        timeline
+        {i18n[lang].timeline}
       </a>
     </li>
     <li>
@@ -26,7 +42,7 @@ import Grille from '../../icons/grille.astro';
         href="/about"
         class="text-[13px] font-medium opacity-40 hover:opacity-85 transition-all duration-300 dark:text-[var(--light-gray)]"
       >
-        about
+        {i18n[lang].about}
       </a>
     </li>
     <li>
@@ -34,7 +50,7 @@ import Grille from '../../icons/grille.astro';
         href="/stack/grid"
         class="text-[13px] font-medium opacity-40 hover:opacity-85 transition-all duration-300 dark:text-[var(--light-gray)]"
       >
-        tech stack
+        {i18n[lang].techStack}
       </a>
     </li>
     <li>
@@ -42,13 +58,15 @@ import Grille from '../../icons/grille.astro';
         href="/bookshelf"
         class="text-[13px] font-medium opacity-40 hover:opacity-85 transition-all duration-300 dark:text-[var(--light-gray)]"
       >
-        bookshelf
+        {i18n[lang].bookshelf}
       </a>
     </li>
   </ul>
 </section>
 <section class="py-32 flex flex-row items-center justify-center gap-4 opacity-40">
   <Grille className="opacity-20 scale-y-[1] scale-x-[-1]" />
-  <span class="w-max leading-4 text-sm font-medium opacity-60">stay hungry, stay foolish</span>
+  <span class="w-max leading-4 text-sm font-medium opacity-60">
+    {i18n[lang].phrase}
+  </span>
   <Grille className="opacity-20 " />
 </section>

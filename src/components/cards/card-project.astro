@@ -8,11 +8,19 @@ interface Props {
 }
 
 const { project, isPageWork } = Astro.props
-const { title, description, image, id, state, year } = project
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+const {
+  [`title-${lang}` as 'title-en' | 'title-es']: title,
+  [`description-${lang}` as 'description-en' | 'description-es']: description,
+  image,
+  id,
+  state,
+  year
+} = project
 ---
 
 <article>
-  <a href={`/work/${id}`} rel="noreferrer" transition:name=`project ${id} box`>
+  <a href={`${lang === 'en' ? `/work/${id}` : `/es/work/${id}`}`} rel="noreferrer" transition:name=`project ${id} box`>
     <div
       class="mb-3 relative cursor-pointer p-3 rounded-[20px] before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
       hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 before:hover:bg-hover-background"
@@ -41,7 +49,11 @@ const { title, description, image, id, state, year } = project
         >
           {title}
         </h3>
-        {isPageWork && <span class="text-xs font-medium my-[2px] opacity-30 uppercase">{year}</span>}
+        {
+          isPageWork && (
+            <span class="text-xs font-medium my-[2px] opacity-30 uppercase">{year}</span>
+          )
+        }
         <p
           class="tracking-[-0.25px] leading-[140%] font-normal opacity-60 text-[15px]"
           transition:name=`project ${id} description`

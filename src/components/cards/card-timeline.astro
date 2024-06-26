@@ -1,13 +1,21 @@
 ---
 import { Image } from 'astro:assets'
-import type { Timeline } from '../../content/timeline'
+import type { Timeline } from '@content/timeline'
 
 interface Props {
   timeline: Timeline
 }
 
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
 const { timeline } = Astro.props
-const { title, date, description, image, link, tags } = timeline
+const {
+  [`title-${lang}` as 'title-en' | 'title-es']: title,
+  date,
+  [`description-${lang}` as 'description-en' | 'description-es']: description,
+  image,
+  link,
+  tags
+} = timeline
 ---
 
 <div class="w-full relative">

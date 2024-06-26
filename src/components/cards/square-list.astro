@@ -7,7 +7,8 @@ interface Props {
 }
 
 const { tech } = Astro.props
-const { logo, url, name, description } = tech
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+const { logo, url, name, [`description-${lang}` as 'description-en' | 'description-es']: description } = tech
 ---
 
 {
@@ -26,7 +27,7 @@ const { logo, url, name, description } = tech
           alt={name} 
           width="96" 
           height="96" 
-          class="rounded-lg size-[96px] object-contain" 
+          class="rounded-lg size-[96px] object-contain min-w-[96px]" 
         />
         <div class="flex flex-col ml-4">
           <h5 class="relative text-base font-bold tracking-[-0.4px] items-center flex my-1">{name}</h5>

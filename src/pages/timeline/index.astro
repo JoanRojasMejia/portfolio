@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets'
-import Grille from '../../icons/grille.astro'
-import MainLayout from '../../layouts/MainLayout.astro'
-import { timelines } from '../../content/timeline'
-import CardTimeline from '../../components/cards/card-timeline.astro'
+import CardTimeline from '@components/cards/card-timeline.astro'
+import { timelines } from '@content/timeline'
+import Grille from '@icons/grille.astro'
+import MainLayout from '@layouts/MainLayout.astro'
 
 const timelineReverse = structuredClone(timelines).reverse()
 ---
@@ -37,7 +37,7 @@ const timelineReverse = structuredClone(timelines).reverse()
           <Grille className="opacity-20 " />
         </div>
       </div>
-      <section class="mt-[60px]">
+      <section class="mt-[30px]">
         {timelineReverse.map((timeline) => <CardTimeline timeline={timeline} />)}
       </section>
     </div>

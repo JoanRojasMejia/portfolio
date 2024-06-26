@@ -1,69 +1,117 @@
 ---
-import Twitter from '../../icons/twitter.astro'
-import Moon from '../../icons/moon.astro'
-import Linkedin from '../../icons/linkedin.astro'
-import Github from '../../icons/github.astro'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import Linkedin from '@icons/linkedin.astro'
+import Github from '@icons/github.astro'
+import English from '@icons/english.astro'
+import Spanish from '@icons/spanish.astro'
+import ThemeToggle from '@components/theme/theme-toggle'
+
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+const defaultPage = getRelativeLocaleUrl(lang, '')
+const aboutURL = getRelativeLocaleUrl(lang, 'about')
+const timelineURL = getRelativeLocaleUrl(lang, 'timeline')
+const workURL = getRelativeLocaleUrl(lang, 'work')
+const techStackURL = getRelativeLocaleUrl(lang, 'stack/grid')
+const bookshelfURL = getRelativeLocaleUrl(lang, 'bookshelf')
+
+const pathname = Astro.url.pathname
+const lastChar = pathname.at(-1)
+const cleanPathname = pathname.substring(
+  1,
+  lastChar === '/' ? pathname.length - 1 : pathname.length
+)
+const splitPathname = cleanPathname.split('/')
+const auxRedirect =
+  splitPathname.length > 1 && lang !== 'en'
+    ? splitPathname.toSpliced(0, 1).join('/')
+    : splitPathname.join('/')
+const redirect = auxRedirect === 'es' || auxRedirect === '/' ? '' : auxRedirect
+
+const i18n = {
+  es: {
+    timeline: 'cronología',
+    work: 'trabajo',
+    about: 'sobre mí',
+    techStack: 'tecnologías',
+    bookshelf: 'libros'
+  },
+  en: {
+    timeline: 'timeline',
+    work: 'work',
+    about: 'about',
+    techStack: 'tech stack',
+    bookshelf: 'bookshelf'
+  }
+}
 ---
 
 <nav class="w-[708px] m-auto pt-6">
-  <div
-    class="backdrop-blur-2xl px-4 py-[10px] flex flex-row justify-between bg-[var(--nav-bg)] rounded-xl"
-  >
-    <div class="flex items-center max-h-10 h-10 w-full">
-      <div>
-        <a href="/">Joan</a>
+  <div>
+    <div
+      class="backdrop-blur-2xl px-4 py-[10px] flex flex-row justify-between bg-[var(--nav-bg)] rounded-xl"
+    >
+      <div class="flex items-center max-h-10 h-10 w-full">
+        <div>
+          <a href={defaultPage}>Joan</a>
+        </div>
+        <div class="flex items-center max-h-10 ml-2 relative w-full justify-center">
+          <ul class="m-o flex flex-row">
+            <li class="relative">
+              <!-- <a href={`${lang === 'en' ? `/timeline` : `/${lang}/timeline`}`}> -->
+              <a href={timelineURL}>
+                <span
+                  class="font-semibold px-3 bg-repeat bg-clip-text bg-100% bg-[var(--retro-2c)] bg-text-gradient"
+                  style="-webkit-text-fill-color:transparent"
+                >
+                  {i18n[lang].timeline}
+                </span>
+              </a>
+            </li>
+            <li class="relative">
+              <a class="block relative px-3 text-base tracking-tight font-medium" href={workURL}>
+                {i18n[lang].work}
+              </a>
+            </li>
+            <li class="relative">
+              <a class="block relative px-3 text-base tracking-tight font-medium" href={aboutURL}
+                >{i18n[lang].about}
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                class="block relative px-3 text-base tracking-tight font-medium"
+                href={techStackURL}
+                >{i18n[lang].techStack}
+              </a>
+            </li>
+            <li class="relative">
+              <a
+                class="block relative px-3 text-base tracking-tight font-medium"
+                href={bookshelfURL}
+                >{i18n[lang].bookshelf}
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="flex items-center max-h-10 ml-2 relative w-full justify-center">
-        <ul class="m-o flex flex-row">
-          <li class="relative">
-            <a href="/timeline">
-              <span
-                class="font-semibold px-3 bg-repeat bg-clip-text bg-100% bg-[var(--retro-2c)] bg-text-gradient"
-                style="-webkit-text-fill-color:transparent"
-              >
-                timeline
-              </span>
-            </a>
-          </li>
-          <li class="relative">
-            <a class="block relative px-3 text-base tracking-tight font-medium" href="/work">
-              work
-            </a>
-          </li>
-          <li class="relative">
-            <a class="block relative px-3 text-base tracking-tight font-medium" href="/about"
-              >about
-            </a>
-          </li>
-          <li class="relative">
-            <a class="block relative px-3 text-base tracking-tight font-medium" href="/stack/grid"
-              >tech stack
-            </a>
-          </li>
-          <li class="relative">
-            <a class="block relative px-3 text-base tracking-tight font-medium" href="/bookshelf"
-              >bookshelf
-            </a>
-          </li>
-        </ul>
+      <div class="flex items-center max-h-10 h-10">
+        <div class="flex items-center max-h-10 mr-3 border-r border-[var(--grey-100)]">
+          <a href="https://github.com/JoanRojasMejia" class="py-[2px] px-3" target="_blank"
+            ><Github />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/joan-rojas-mejia/"
+            target="_blank"
+            class="py-[2px] px-3"><Linkedin /></a
+          >
+        </div>
+        <div class="flex flex-row">
+          <a class="px-2" href={`${lang === 'es' ? `/${redirect}` : `/es/${redirect}`}`}>
+            {lang === 'es' ? <Spanish /> : <English />}
+          </a>
+          <ThemeToggle client:only />
+        </div>
       </div>
-    </div>
-    <div class="flex items-center max-h-10 h-10">
-      <div class="flex items-center max-h-10 mr-3 border-r border-[var(--grey-100)]">
-        <a href="https://github.com/JoanRojasMejia" class="py-[2px] px-3" target="_blank"
-          ><Github />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/joan-rojas-mejia/"
-          target="_blank"
-          class="py-[2px] px-3"><Linkedin /></a
-        >
-        <a href="https://x.com/JoanRoj18271625" class="py-[2px] px-3" target="_blank">
-          <Twitter />
-        </a>
-      </div>
-      <div class="sc-481ef671-6 dZnvFc"><Moon /></div>
-      <!-- <span class="sc-481ef671-8 dISDXm"></span> -->
     </div>
   </div>
 </nav>
