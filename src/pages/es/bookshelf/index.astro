@@ -3,7 +3,6 @@ import { Image } from 'astro:assets'
 import { books } from '@content/books'
 import Grille from '@icons/grille.astro'
 import MainLayout from '@layouts/MainLayout.astro'
-
 ---
 
 <MainLayout>
@@ -24,7 +23,7 @@ import MainLayout from '@layouts/MainLayout.astro'
           <span class="w-max flex h-min">
             <Image
               loading="eager"
-              class="invert mx-6"
+              class="dark:invert mx-6"
               alt={'dots'}
               src="/three-dots.svg"
               width="35"

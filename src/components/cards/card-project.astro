@@ -20,10 +20,15 @@ const {
 ---
 
 <article>
-  <a href={`${lang === 'en' ? `/work/${id}` : `/es/work/${id}`}`} rel="noreferrer" transition:name=`project ${id} box`>
+  <a
+    href={`${lang === 'en' ? `/work/${id}` : `/es/work/${id}`}`}
+    rel="noreferrer"
+    transition:name=`project ${id} box`
+  >
     <div
       class="mb-3 relative cursor-pointer p-3 rounded-[20px] before:rounded-lg before:block before:absolute before:-z-10 before:inset-[-2px] before:opacity-0 before:scale-75
-      hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300 before:hover:bg-hover-background"
+      hover:transition-all hover:duration-300 before:hover:opacity-90 before:hover:scale-100 before:hover:transition-all before:hover:duration-300
+      before:hover:bg-hover-background-light dark:before:hover:bg-hover-background"
     >
       <div class="w-full relative">
         <Image
@@ -42,7 +47,7 @@ const {
           {state}
         </span>
       </div>
-      <div class="flex flex-col mt-[6px]">
+      <div class="flex flex-col mt-[6px] text-dark dark:text-white">
         <h3
           class="font-bold text-base flex items-center my-1 tracking-[-0.4px]"
           transition:name=`project ${id} title`

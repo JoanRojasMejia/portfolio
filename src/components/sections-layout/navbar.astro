@@ -48,7 +48,7 @@ const i18n = {
 <nav class="w-[708px] m-auto pt-6">
   <div>
     <div
-      class="backdrop-blur-2xl px-4 py-[10px] flex flex-row justify-between bg-[var(--nav-bg)] rounded-xl"
+      class="backdrop-blur-2xl px-4 py-[10px] flex flex-row justify-between bg-[rgba(255,255,255,.3)] dark:bg-[var(--nav-bg)] rounded-xl"
     >
       <div class="flex items-center max-h-10 h-10 w-full">
         <div>
@@ -95,15 +95,17 @@ const i18n = {
         </div>
       </div>
       <div class="flex items-center max-h-10 h-10">
-        <div class="flex items-center max-h-10 mr-3 border-r border-[var(--grey-100)]">
+        <div class="flex items-center max-h-10 mr-3 border-r border-[rgba(48,52,77,.1)] dark:border-[var(--grey-100)]">
           <a href="https://github.com/JoanRojasMejia" class="py-[2px] px-3" target="_blank"
             ><Github />
           </a>
           <a
             href="https://www.linkedin.com/in/joan-rojas-mejia/"
             target="_blank"
-            class="py-[2px] px-3"><Linkedin /></a
+            class="py-[2px] px-3"
           >
+            <Linkedin />
+          </a>
         </div>
         <div class="flex flex-row">
           <a class="px-2" href={`${lang === 'es' ? `/${redirect}` : `/es/${redirect}`}`}>
@@ -115,3 +117,74 @@ const i18n = {
     </div>
   </div>
 </nav>
+<script is:inline>
+  const i18nTitleAndIcon = {
+    es: {
+      timeline: {
+        name: 'cronología ✦ joan Rojas',
+        icon: '/timeline.svg'
+      },
+      work: {
+        name: 'trabajo ✦ joan Rojas',
+        icon: '/work.svg'
+      },
+      about: {
+        name: 'sobre mí ✦ joan Rojas',
+        icon: '/about.svg'
+      },
+      stack: {
+        name: 'tecnologías ✦ joan Rojas',
+        icon: '/tech-stack.svg'
+      },
+      bookshelf: {
+        name: 'libros ✦ joan Rojas',
+        icon: '/bookshelf.svg'
+      }
+    },
+    en: {
+      timeline: {
+        name: 'timeline ✦ joan Rojas',
+        icon: '/timeline.svg'
+      },
+      work: {
+        name: 'work ✦ joan Rojas',
+        icon: '/work.svg'
+      },
+      about: {
+        name: 'about ✦ joan Rojas',
+        icon: '/about.svg'
+      },
+      stack: {
+        name: 'tech stack ✦ joan Rojas',
+        icon: '/tech-stack.svg'
+      },
+      bookshelf: {
+        name: 'bookshelf ✦ joan Rojas',
+        icon: '/bookshelf.svg'
+      }
+    }
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    const pathname = window.location.pathname
+    const lastChar = pathname.at(-1)
+    const cleanPathname = pathname.substring(
+      1,
+      lastChar === '/' ? pathname.length - 1 : pathname.length
+    )
+    const splitPathname = cleanPathname.split('/')
+    const lang = splitPathname?.[0] === 'es' ? 'es' : 'en'
+    const page = splitPathname?.[0] === 'es' ? splitPathname?.[1] : splitPathname?.[0]
+    changeDocumentIconAndTitle(i18nTitleAndIcon[lang][page].name, i18nTitleAndIcon[lang][page].icon)
+  })
+
+  const changeDocumentIconAndTitle = (name, icon) => {
+    const oldLink = document.querySelector('link[rel~="icon"]')
+    const link = document.createElement('link')
+    link.setAttribute('rel', 'icon')
+    link.setAttribute('href', icon)
+    document.head.removeChild(oldLink)
+    document.head.appendChild(link)
+    document.title = name
+  }
+</script>
