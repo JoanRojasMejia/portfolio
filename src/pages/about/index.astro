@@ -3,7 +3,6 @@ import { BorderBeam } from '@components/magic-ui/border-beam'
 import Grille from '@icons/grille.astro'
 import MainLayout from '@layouts/MainLayout.astro'
 import { Image } from 'astro:assets'
-
 ---
 
 <MainLayout>
@@ -16,8 +15,8 @@ import { Image } from 'astro:assets'
         >
           About
         </h4>
-        <p class="text-lg tracking-[-0.28px] leading-[140%]">
-          Little about me. Also, It’s not that hard to find my contact just search joan.
+        <p class="text-lg tracking-[-0.28px] leading-[140%] text-balance">
+          A bit about me, my professional journey, and my approach as a developer.
         </p>
         <div class="flex justify-center items-center my-3">
           <Grille className="opacity-20 scale-y-[1] scale-x-[-1]" />
@@ -30,7 +29,6 @@ import { Image } from 'astro:assets'
               width="35"
               height="35"
             />
-            
           </span>
           <Grille className="opacity-20 " />
         </div>
@@ -48,14 +46,22 @@ import { Image } from 'astro:assets'
           />
           <BorderBeam size={300} duration={12} delay={9} borderWidth={2} />
         </div>
-        <div class="max-w-[500px] mx-auto mt-11">
+        <div class="max-w-[600px] mx-auto mt-11">
           <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
-            As a digital artist, I have been bringing a splash of color to the internet for years
-            through my illustrations and designs. I assist brands in developing their visual
-            identity and design language to make their products more appealing and accessible.
-            Currently, I am building design tools and resources @overlayz. In my spare time, I love
-            sharing my learnings and open-source design resources to help my fellow designers,
-            developers, and enthusiasts.
+            As a FullStack developer passionate about creating experiences and driving digital
+            innovation, I have spent the last 4 years building complex applications. My experience
+            ranges from developing engaging user interfaces to implementing scalable and secure
+            backend solutions, all with a focus on quality and efficiency using technologies such as
+            NextJS, ReactJS, NodeJS, Golang, MongoDB, and more.
+          </p>
+          <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
+            In addition to my technical skills, I excel at working both in teams and independently.
+            I enjoy collaborating with other professionals, sharing ideas, and finding innovative
+            solutions to complex problems. My focus on clear and effective communication has allowed
+            me to contribute significantly to projects, not only by providing creative solutions but
+            also by helping to maintain a harmonious workflow. I am always looking for opportunities
+            to improve and support the team in meeting common goals, adapting to different work
+            styles and project needs.
           </p>
           <h4
             class="mt-[54px] opacity-70 dark:text-[var(--light-gray)] tracking-[2px] uppercase text-sm px-4 font-semibold"
@@ -63,34 +69,49 @@ import { Image } from 'astro:assets'
             Current
           </h4>
           <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
-            As a digital artist, I have been bringing a splash of color to the internet for years
-            through my illustrations and designs. I assist brands in developing their visual
-            identity and design language to make their products more appealing and accessible.
-            Currently, I am building design tools and resources @overlayz. In my spare time, I love
-            sharing my learnings and open-source design resources to help my fellow designers,
-            developers, and enthusiasts.
-          </p>
-          <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
-            As a digital artist, I have been bringing a splash of color to the internet for years
-            through my illustrations and designs. I assist brands in developing their visual
-            identity and design language to make their products more appealing and accessible.
-            Currently, I am building design tools and resources @overlayz. In my spare time, I love
-            sharing my learnings and open-source design resources to help my fellow designers,
-            developers, and enthusiasts.
+            Recently, I have been dedicating time to learning AstroJs, a framework known for its
+            focus on speed and simplicity, which has allowed me to refine my skills in developing
+            modern and efficient web applications. This new knowledge has given me a fresh
+            perspective on performance optimization and creating faster user experiences.
+            Additionally, I am currently studying English at the Universidad Pedagógica de Colombia,
+            aiming to enhance my communication skills and prepare for collaborating with
+            international teams, thus expanding my professional opportunities on a global scale.
           </p>
           <h4
             class="mt-[54px] opacity-70 dark:text-[var(--light-gray)] tracking-[2px] uppercase text-sm px-4 font-semibold"
           >
-            Current
+            Interactions and mentions
           </h4>
-          <p class="text-base my-3 px-4 leading-[150%] tracking-[-0.25px]">
-            As a digital artist, I have been bringing a splash of color to the internet for years
-            through my illustrations and designs. I assist brands in developing their visual
-            identity and design language to make their products more appealing and accessible.
-            Currently, I am building design tools and resources @overlayz. In my spare time, I love
-            sharing my learnings and open-source design resources to help my fellow designers,
-            developers, and enthusiasts.
-          </p>
+          <div class="px-4 my-3">
+            <Image
+              loading="eager"
+              alt="me"
+              src="/mention-1.webp"
+              class="rounded-2xl object-cover w-full "
+              width={1212}
+              height={1260}
+            />
+          </div>
+          <div class="px-4 my-3">
+            <Image
+              loading="eager"
+              alt="me"
+              src="/mention-2.webp"
+              class="rounded-2xl object-cover w-full "
+              width={1212}
+              height={1260}
+            />
+          </div>
+          <div class="px-4 my-3">
+            <Image
+              loading="eager"
+              alt="me"
+              src="/mention-3.webp"
+              class="rounded-2xl object-cover w-full "
+              width={1212}
+              height={1260}
+            />
+          </div>
         </div>
       </section>
     </div>

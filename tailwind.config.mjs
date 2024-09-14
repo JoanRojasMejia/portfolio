@@ -21,7 +21,8 @@ export default {
           'linear-gradient(90.42deg, #4ab1f1 0.58%,#566cec 37.22%,#d749af 73.87%, #ff7c51 112.26%)',
         'text-sky-gradient': 'linear-gradient(90deg,#80D0F2 0%,#5C82FF 50%,#C480FF 100%)',
         'hover-background': 'linear-gradient(90deg,rgba(30,28,50,0.8) 0%,rgba(43,22,29,0.7) 100%)',
-        'hover-background-light': 'linear-gradient(90deg,rgba(255,233,244,0.4) 0%,rgba(234,243,255,0.7) 100%)',
+        'hover-background-light':
+          'linear-gradient(90deg,rgba(255,233,244,0.4) 0%,rgba(234,243,255,0.7) 100%)',
         'dream-gradient': 'linear-gradient(73.19deg,#DC79FF 0%,#256BFA 95.06%);',
         'rainbow-gradient':
           'linear-gradient(90deg,#DC36FA 0%,#A167EF 25%,#609FE4 50%,#3ABFDE 75%,#04D18E 100%)',
@@ -34,7 +35,10 @@ export default {
       animation: {
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
+        'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+        gradient: 'gradient 8s linear infinite',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out'
       },
       boxShadow: {
         'box-shadow-book':
@@ -62,6 +66,11 @@ export default {
           },
           to: {
             'background-position': '0% 0%'
+          }
+        },
+        gradient: {
+          to: {
+            backgroundPosition: 'var(--bg-size) 0'
           }
         },
         'border-beam': {

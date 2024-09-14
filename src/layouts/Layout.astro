@@ -12,9 +12,12 @@ const { title } = Astro.props
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="Portfolio Joan Rojas Mejia" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/glasess.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions fallback="none" />
@@ -37,6 +40,13 @@ const { title } = Astro.props
         --retro-2c: #566cec;
         --grey-100: rgba(255, 255, 255, 0.1);
         --light-gray: rgba(114, 120, 136, 0.6);
+      }
+
+      .playwrite-ui {
+        font-family: 'Playwrite CU', cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
       }
 
       body {

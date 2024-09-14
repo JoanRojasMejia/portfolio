@@ -5,6 +5,8 @@ import Github from '@icons/github.astro'
 import English from '@icons/english.astro'
 import Spanish from '@icons/spanish.astro'
 import ThemeToggle from '@components/theme/theme-toggle'
+import AnimatedGradientText from '@components/magic-ui/animated-gradient-text'
+import { cn } from '@utils/utils'
 
 const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
 const defaultPage = getRelativeLocaleUrl(lang, '')
@@ -51,18 +53,26 @@ const i18n = {
       class="backdrop-blur-2xl px-4 py-[10px] flex flex-row justify-between bg-[rgba(255,255,255,.3)] dark:bg-[var(--nav-bg)] rounded-xl"
     >
       <div class="flex items-center max-h-10 h-10 w-full">
-        <div>
-          <a href={defaultPage}>Joan</a>
-        </div>
+        <a href={defaultPage}>
+          <!-- <span class="playwrite-ui font-bold text-xl">Joan</span> -->
+          <AnimatedGradientText>
+            <span
+              class={cn(
+                `animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text 
+                text-transparent relative top-[2px] h-9`
+              )}
+            >
+              <span class="playwrite-ui font-bold text-xl">Joan</span>
+            </span>
+            <!-- <span class="playwrite-ui font-bold text-xl">Joan</span> -->
+          </AnimatedGradientText>
+        </a>
         <div class="flex items-center max-h-10 ml-2 relative w-full justify-center">
           <ul class="m-o flex flex-row">
             <li class="relative">
               <!-- <a href={`${lang === 'en' ? `/timeline` : `/${lang}/timeline`}`}> -->
               <a href={timelineURL}>
-                <span
-                  class="font-semibold px-3 bg-repeat bg-clip-text bg-100% bg-[var(--retro-2c)] bg-text-gradient"
-                  style="-webkit-text-fill-color:transparent"
-                >
+                <span class="block relative px-3 text-base tracking-tight font-medium">
                   {i18n[lang].timeline}
                 </span>
               </a>
@@ -95,7 +105,9 @@ const i18n = {
         </div>
       </div>
       <div class="flex items-center max-h-10 h-10">
-        <div class="flex items-center max-h-10 mr-3 border-r border-[rgba(48,52,77,.1)] dark:border-[var(--grey-100)]">
+        <div
+          class="flex items-center max-h-10 mr-3 border-r border-[rgba(48,52,77,.1)] dark:border-[var(--grey-100)]"
+        >
           <a href="https://github.com/JoanRojasMejia" class="py-[2px] px-3" target="_blank"
             ><Github />
           </a>

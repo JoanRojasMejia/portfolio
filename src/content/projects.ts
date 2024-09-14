@@ -25,9 +25,8 @@ export const projects: Project[] = [
     id: '1',
     'title-en': 'Sales force',
     'title-es': 'Fuerza de ventas',
-    'description-en': 'Dynamic application for sales force and reporting adaptable to any company.',
-    'description-es':
-      'Aplicación dinámica para fuerza de ventas y reportes adaptable a cualquier empresa.',
+    'description-en': 'Dynamic application for sales force and reports adaptable to businesses.',
+    'description-es': 'Aplicación dinámica para fuerza de ventas y reportes adaptable a negocios.',
     image: '/project-1.webp',
     tags: ['React', 'Sass', 'TypeScript', 'GraphQL', 'Git'],
     state: 'private',
@@ -73,7 +72,7 @@ export const projects: Project[] = [
     'title-es': 'Componentes dinámicos',
     'description-en': 'Library of dynamic components adapted for information visualization.',
     'description-es':
-      'Librería de componentes dinámicos adaptados para visualizacion de información.',
+      'Librería de componentes dinámicos adaptados para visualización de información.',
     image: '/project-2.webp',
     tags: ['React', 'Sass', 'TypeScript', 'Git'],
     state: 'private',
@@ -154,126 +153,121 @@ export const projects: Project[] = [
     id: '4',
     'title-en': 'ASED',
     'title-es': 'ASED',
-    'description-en': 'Business management for an exterior design company',
-    'description-es': 'Gestion de negocio para una compañia de diseño de exteriores.',
+    'description-en': 'Business management for an exterior design company.',
+    'description-es': 'Gestión de negocio para una compañia de diseño de exteriores.',
     image: '/project-4.webp',
-    tags: ['Nextjs', 'Tailwindcss', 'TypeScript', 'Git'],
+    tags: ['Nextjs', 'Nodejs', 'Tailwindcss', 'TypeScript', 'Git'],
     state: 'private',
     year: '2024',
-    'firstParagraph-en': `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu bibendum nulla. Nullam 
-      facilisis porta sem quis interdum. Suspendisse rutrum ex sem, et rhoncus nunc posuere eget. Curabitur 
-      arius augue lectus, quis condimentum enim pretium ac. Pellentesque maximus vestibulum enim non luctus. 
-      Maecenas tellus sem, commodo id mi sed, bibendum euismod urna. Nam metus sapien, venenatis id feugiat eget, 
-      sollicitudin a elit. Ut hendrerit, risus eu rutrum maximus, risus sapien auctor dui, eu efficitur metus odio a augue. 
-      Cras lacinia et massa vitae rutrum. Nam non cursus mi. Duis consectetur, enim vel fermentum lobortis, dolor augue gravida massa, 
-      ut consectetur enim ex sed felis. Donec sed massa varius, mattis purus nec, bibendum sapien. Vivamus at lacinia risus. 
-      Phasellus nec turpis tortor.`,
-    'firstParagraph-es': `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu bibendum nulla. Nullam 
-      facilisis porta sem quis interdum. Suspendisse rutrum ex sem, et rhoncus nunc posuere eget. Curabitur 
-      arius augue lectus, quis condimentum enim pretium ac. Pellentesque maximus vestibulum enim non luctus. 
-      Maecenas tellus sem, commodo id mi sed, bibendum euismod urna. Nam metus sapien, venenatis id feugiat eget, 
-      sollicitudin a elit. Ut hendrerit, risus eu rutrum maximus, risus sapien auctor dui, eu efficitur metus odio a augue. 
-      Cras lacinia et massa vitae rutrum. Nam non cursus mi. Duis consectetur, enim vel fermentum lobortis, dolor augue gravida massa, 
-      ut consectetur enim ex sed felis. Donec sed massa varius, mattis purus nec, bibendum sapien. Vivamus at lacinia risus. 
-      Phasellus nec turpis tortor.`,
-    'secondParagraph-en': `Vestibulum posuere quis ante sit amet vulputate. In lorem sem, tempus id erat in, consectetur luctus turpis. Cras ac 
-      risus odio. Etiam tempor ligula eu mi dapibus placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit 
-      amet, consectetur adipiscing elit. Maecenas tristique justo id ante sagittis, vel placerat magna viverra. Morbi sodales urna vel arcu tincidunt, 
-      a bibendum arcu tempor. Mauris vulputate rhoncus porttitor.`,
-    'secondParagraph-es': `Vestibulum posuere quis ante sit amet vulputate. In lorem sem, tempus id erat in, consectetur luctus turpis. Cras ac 
-      risus odio. Etiam tempor ligula eu mi dapibus placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit 
-      amet, consectetur adipiscing elit. Maecenas tristique justo id ante sagittis, vel placerat magna viverra. Morbi sodales urna vel arcu tincidunt, 
-      a bibendum arcu tempor. Mauris vulputate rhoncus porttitor.`,
-    'thirdParagraph-en': `Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus at risus diam. Interdum et malesuada 
-      fames ac ante ipsum primis in faucibus. Nunc eu posuere urna, quis fringilla ligula. In hac habitasse platea dictumst. Nulla facilisi. Fusce convallis
-      lorem dui, vel porttitor mi facilisis nec. Nam ultrices sapien ac pretium facilisis.`,
-    'thirdParagraph-es': `Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus at risus diam. Interdum et malesuada 
-      fames ac ante ipsum primis in faucibus. Nunc eu posuere urna, quis fringilla ligula. In hac habitasse platea dictumst. Nulla facilisi. Fusce convallis
-      lorem dui, vel porttitor mi facilisis nec. Nam ultrices sapien ac pretium facilisis.`,
+    'firstParagraph-en': `This project arose from a company's need to implement a software solution that would optimize its entire customer acquisition process and 
+    improve request management. The development was structured in two main parts: a landing page focused on customer acquisition and an internal platform for managing 
+    all of its content. This platform allows for efficient management of texts, users, categories, business partners, and other key elements. In addition, to improve 
+    interaction with customers, a real-time chat was implemented that facilitates direct communication. The project was developed using modern technologies, including 
+    ReactJS for the user interface, NodeJS for the backend, Socket.io for the real-time chat functionality, and Apolo UI for custom interface components, ensuring a robust and scalable solution.`,
+    'firstParagraph-es': `Este proyecto surgió de la necesidad de una empresa por implementar una solución de software que optimizara todo su proceso de adquisición 
+      de clientes y mejorara la gestión de solicitudes. El desarrollo se estructuró en dos partes principales: una landing page enfocada en la captación de clientes y 
+      una plataforma interna para la administración de todo su contenido. Esta plataforma permite gestionar de manera eficiente los textos, usuarios, categorías, socios 
+      comerciales (partners) y otros elementos clave. Además, para mejorar la interacción con los clientes, se implementó un chat en tiempo real que facilita la 
+      comunicación directa. El proyecto fue desarrollado utilizando tecnologías modernas, entre las que destacan ReactJS para la interfaz de usuario, NodeJS para el 
+      backend, Socket.io para la funcionalidad de chat en tiempo real y Apolo UI para los componentes de interfaz personalizados, garantizando una solución robusta y escalable.`,
+    'secondParagraph-en': `One of the highlights I developed was dynamic management of website content, allowing users to upload and update information such as text, images 
+      and videos efficiently. This was achieved through an intuitive and user-friendly interface, organized into sections that simplify content management without requiring 
+      advanced technical knowledge.`,
+    'secondParagraph-es': `Uno de los aspectos más destacados que desarrollé fue la administración dinámica del contenido del sitio web, permitiendo a los usuarios cargar 
+      y actualizar información como textos, imágenes y videos de manera eficiente. Esto se logró a través de una interfaz intuitiva y fácil de usar, organizada en secciones 
+      que simplifican la gestión del contenido sin requerir conocimientos técnicos avanzados.`,
+    'thirdParagraph-en': `I implemented a flexible category and subcategory management system to clearly and accurately organize the solutions offered by the company. 
+      This system optimized the end-user experience, facilitating a more structured and accessible navigation. In addition, it allowed the company to manage its content 
+      autonomously, giving it full control over service and product updates without relying on the development team for minor adjustments. This solution not only improved 
+      operational efficiency, but also guaranteed more agile and sustainable maintenance in the long term.`,
+    'thirdParagraph-es': `Implementé un sistema flexible de gestión de categorías y subcategorías para organizar de manera clara y precisa las soluciones ofrecidas por 
+      la empresa. Este sistema optimizó la experiencia del usuario final, facilitando una navegación más estructurada y accesible. Además, permitió a la compañía gestionar 
+      su contenido de forma autónoma, brindándole control total sobre las actualizaciones de servicios y productos sin depender del equipo de desarrollo para ajustes menores. 
+      Esta solución no solo mejoró la eficiencia operativa, sino que también garantizó un mantenimiento más ágil y sostenible a largo plazo.`,
     images: ['/project-4-1.webp', '/project-4-2.webp']
   },
   {
     id: '5',
-    'title-en': 'Ecuadorian registry',
-    'title-es': 'Registraduría ecuatoriana',
-    'description-en': 'This is a description-en of project 2',
+    'title-en': 'Your VIP procedures',
+    'title-es': 'Tus tramites VIP',
+    'description-en': 'Identification management platform for Ecuadorians.',
+    'description-es': 'Plataforma de gestion identificatoria de los ecuatorianos.',
     image: '/project-5.webp',
-    tags: ['React', 'Sass', 'JavaScript', 'Git'],
+    tags: ['React', 'Nodejs', 'JavaScript', 'MongoDB', 'Sass', 'Git'],
     state: 'private',
     year: '2023 - 2024',
-    'firstParagraph-en': `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu bibendum nulla. Nullam 
-      facilisis porta sem quis interdum. Suspendisse rutrum ex sem, et rhoncus nunc posuere eget. Curabitur 
-      arius augue lectus, quis condimentum enim pretium ac. Pellentesque maximus vestibulum enim non luctus. 
-      Maecenas tellus sem, commodo id mi sed, bibendum euismod urna. Nam metus sapien, venenatis id feugiat eget, 
-      sollicitudin a elit. Ut hendrerit, risus eu rutrum maximus, risus sapien auctor dui, eu efficitur metus odio a augue. 
-      Cras lacinia et massa vitae rutrum. Nam non cursus mi. Duis consectetur, enim vel fermentum lobortis, dolor augue gravida massa, 
-      ut consectetur enim ex sed felis. Donec sed massa varius, mattis purus nec, bibendum sapien. Vivamus at lacinia risus. 
-      Phasellus nec turpis tortor.`,
-    'firstParagraph-es': `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu bibendum nulla. Nullam 
-      facilisis porta sem quis interdum. Suspendisse rutrum ex sem, et rhoncus nunc posuere eget. Curabitur 
-      arius augue lectus, quis condimentum enim pretium ac. Pellentesque maximus vestibulum enim non luctus. 
-      Maecenas tellus sem, commodo id mi sed, bibendum euismod urna. Nam metus sapien, venenatis id feugiat eget, 
-      sollicitudin a elit. Ut hendrerit, risus eu rutrum maximus, risus sapien auctor dui, eu efficitur metus odio a augue. 
-      Cras lacinia et massa vitae rutrum. Nam non cursus mi. Duis consectetur, enim vel fermentum lobortis, dolor augue gravida massa, 
-      ut consectetur enim ex sed felis. Donec sed massa varius, mattis purus nec, bibendum sapien. Vivamus at lacinia risus. 
-      Phasellus nec turpis tortor.`,
-    'secondParagraph-en': `Vestibulum posuere quis ante sit amet vulputate. In lorem sem, tempus id erat in, consectetur luctus turpis. Cras ac 
-      risus odio. Etiam tempor ligula eu mi dapibus placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit 
-      amet, consectetur adipiscing elit. Maecenas tristique justo id ante sagittis, vel placerat magna viverra. Morbi sodales urna vel arcu tincidunt, 
-      a bibendum arcu tempor. Mauris vulputate rhoncus porttitor.`,
-    'secondParagraph-es': `Vestibulum posuere quis ante sit amet vulputate. In lorem sem, tempus id erat in, consectetur luctus turpis. Cras ac 
-      risus odio. Etiam tempor ligula eu mi dapibus placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit 
-      amet, consectetur adipiscing elit. Maecenas tristique justo id ante sagittis, vel placerat magna viverra. Morbi sodales urna vel arcu tincidunt, 
-      a bibendum arcu tempor. Mauris vulputate rhoncus porttitor.`,
-    'thirdParagraph-en': `Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus at risus diam. Interdum et malesuada 
-      fames ac ante ipsum primis in faucibus. Nunc eu posuere urna, quis fringilla ligula. In hac habitasse platea dictumst. Nulla facilisi. Fusce convallis
-      lorem dui, vel porttitor mi facilisis nec. Nam ultrices sapien ac pretium facilisis.`,
-    'thirdParagraph-es': `Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus at risus diam. Interdum et malesuada 
-      fames ac ante ipsum primis in faucibus. Nunc eu posuere urna, quis fringilla ligula. In hac habitasse platea dictumst. Nulla facilisi. Fusce convallis
-      lorem dui, vel porttitor mi facilisis nec. Nam ultrices sapien ac pretium facilisis.`,
-    'fourthParagraph-en': `Donec libero purus, consequat at imperdiet eget, mollis nec dui. Fusce ut massa et odio bibendum maximus quis eu nisi. Proin lobortis 
-      pharetra molestie. Maecenas sagittis eros feugiat mi malesuada maximus. Quisque ac purus dolor. Phasellus auctor diam sed sapien elementum tincidunt. 
-      Nunc nisi est, dapibus sit amet finibus vel, egestas non felis. Nulla ultricies neque eu est consectetur euismod. Aenean consectetur molestie vestibulum. 
-      Maecenas ut eleifend tortor. Nullam a leo turpis. Duis ante ipsum, sollicitudin tempor nisi ut, posuere luctus odio. Phasellus et sem mauris.`,
-    'fourthParagraph-es': `Donec libero purus, consequat at imperdiet eget, mollis nec dui. Fusce ut massa et odio bibendum maximus quis eu nisi. Proin lobortis 
-      pharetra molestie. Maecenas sagittis eros feugiat mi malesuada maximus. Quisque ac purus dolor. Phasellus auctor diam sed sapien elementum tincidunt. 
-      Nunc nisi est, dapibus sit amet finibus vel, egestas non felis. Nulla ultricies neque eu est consectetur euismod. Aenean consectetur molestie vestibulum. 
-      Maecenas ut eleifend tortor. Nullam a leo turpis. Duis ante ipsum, sollicitudin tempor nisi ut, posuere luctus odio. Phasellus et sem mauris.`,
+    'firstParagraph-en': `A collaborative project with the government of Ecuador to develop a platform that would centralize the management of all the country's procedures, 
+      from passport applications to vehicle registration. The main objective of this platform was to streamline processes and reduce corruption by offering a more transparent 
+      and efficient system. We used React JS for the frontend, providing a modern and easy-to-use interface, while in the backend we used Node JS to ensure optimal performance. 
+      For data storage, a non-relational database was implemented, allowing for flexible and scalable management of information. This project marked a significant advance in the 
+      digitalization of public services in Ecuador.`,
+    'firstParagraph-es': `Un proyecto colaborativo con el gobierno de Ecuador para desarrollar una plataforma que centralizara la gestión de todos los trámites del país, 
+      desde la solicitud de pasaportes hasta la inscripción de vehículos. El objetivo principal de esta plataforma fue agilizar los procesos y reducir la corrupción al ofrecer 
+      un sistema más transparente y eficiente. Utilizamos React JS para el frontend, proporcionando una interfaz moderna y fácil de usar, mientras que en el backend empleamos 
+      Node JS para garantizar un rendimiento óptimo. Para el almacenamiento de datos, se implementó una base de datos no relacional, que permitió una gestión flexible y escalable 
+      de la información. Este proyecto marcó un avance significativo en la digitalización de los servicios públicos en Ecuador.`,
+    'secondParagraph-en': `In this project, I played the role of frontend development lead, supervising a team of two developers. My responsibilities included defining the 
+      application architecture, creating the core components, and integrating with the backend. In addition, I performed unit tests to ensure the correct functioning of the 
+      components and was responsible for the complete documentation of the application. I also took care of integration testing, ensuring that all elements of the system worked 
+      together efficiently and without errors. My focus was always on ensuring the quality of the code and the stability of the project.`,
+    'secondParagraph-es': `En este proyecto, desempeñé el rol de líder de desarrollo frontend, supervisando a un equipo de dos desarrolladores. Mis responsabilidades incluyeron 
+      la definición de la arquitectura de la aplicación, la creación de los componentes principales y la integración con el backend. Además, realicé pruebas unitarias para asegurar 
+      el correcto funcionamiento de los componentes y fui responsable de la documentación completa de la aplicación. También me encargué de las pruebas de integración, garantizando 
+      que todos los elementos del sistema trabajaran en conjunto de manera eficiente y sin errores. Mi enfoque estuvo siempre en asegurar la calidad del código y la estabilidad del proyecto.`,
+    'thirdParagraph-en': `I developed the complete flow for completing the procedures, structured in several steps to optimize the user experience. The process begins with entering personal 
+      information, followed by a section where the required documents can be attached. Then, the user selects the most convenient notary to complete the procedure, and finally, the payment of 
+      the associated costs is managed. This design makes it easier for users to complete their procedures more quickly and easily, eliminating complications and streamlining the entire 
+      process from start to finish.`,
+    'thirdParagraph-es': `Desarrollé el flujo completo para la realización de trámites, estructurado en varios pasos para optimizar la experiencia del usuario. 
+      El proceso comienza con el ingreso de información personal, seguido por una sección donde se pueden adjuntar los documentos requeridos. Luego, el usuario selecciona 
+      la notaría más conveniente para completar el trámite, y finalmente, se gestiona el pago de los costos asociados. Este diseño facilita que los usuarios realicen sus 
+      trámites de forma más rápida y sencilla, eliminando complicaciones y agilizando todo el proceso de principio a fin.`,
+    'fourthParagraph-en': `I also developed the application's administration panel, which allowed for complete control of the procedures managed on the platform. This administrative module 
+      gave the possibility of creating new procedures, modifying existing ones and supervising each of the processes. I also included a system to manage and monitor registered users, as well 
+      as the procedures they had carried out. This development was key to providing a comprehensive view of the activities on the platform, facilitating efficient monitoring of both 
+      procedures and users, and optimizing control of the application.`,
+    'fourthParagraph-es': `Además, desarrollé el panel de administración de la aplicación, que permitía llevar un control completo de los trámites gestionados en 
+      la plataforma. Este módulo administrativo daba la posibilidad de crear nuevos trámites, modificar los existentes y supervisar cada uno de los procesos. También 
+      incluí un sistema para gestionar y monitorear a los usuarios registrados, así como los trámites que habían realizado. Este desarrollo fue clave para proporcionar 
+      una visión integral de las actividades en la plataforma, facilitando el seguimiento eficiente tanto de los trámites como de los usuarios, y optimizando el control de la aplicación.`,
     images: ['/project-5-1.webp', '/project-5-2.webp', '/project-5-3.webp']
   },
   {
     id: '6',
-    'title-en': 'Backend Blog API',
-    'title-es': 'API de blog backend',
-    'description-en': 'This is a description-en of project 2',
+    'title-en': 'Backend - Blog API',
+    'title-es': 'Backend - Blog API',
+    'description-en': 'Backend developed in Laravel for a dynamic blog.',
+    'description-es': 'Backend desarrollado en Laravel para un blog dinámico.',
     image: '/project-6.webp',
     tags: ['Php', 'Laravel', 'MongoDB', 'Git'],
     state: 'public',
     year: '2023',
-    'firstParagraph-en': `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu bibendum nulla. Nullam 
-      facilisis porta sem quis interdum. Suspendisse rutrum ex sem, et rhoncus nunc posuere eget. Curabitur 
-      arius augue lectus, quis condimentum enim pretium ac. Pellentesque maximus vestibulum enim non luctus. 
-      Maecenas tellus sem, commodo id mi sed, bibendum euismod urna. Nam metus sapien, venenatis id feugiat eget, 
-      sollicitudin a elit. Ut hendrerit, risus eu rutrum maximus, risus sapien auctor dui, eu efficitur metus odio a augue. 
-      Cras lacinia et massa vitae rutrum. Nam non cursus mi. Duis consectetur, enim vel fermentum lobortis, dolor augue gravida massa, 
-      ut consectetur enim ex sed felis. Donec sed massa varius, mattis purus nec, bibendum sapien. Vivamus at lacinia risus. 
-      Phasellus nec turpis tortor.`,
-    'firstParagraph-es': `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu bibendum nulla. Nullam 
-      facilisis porta sem quis interdum. Suspendisse rutrum ex sem, et rhoncus nunc posuere eget. Curabitur 
-      arius augue lectus, quis condimentum enim pretium ac. Pellentesque maximus vestibulum enim non luctus. 
-      Maecenas tellus sem, commodo id mi sed, bibendum euismod urna. Nam metus sapien, venenatis id feugiat eget, 
-      sollicitudin a elit. Ut hendrerit, risus eu rutrum maximus, risus sapien auctor dui, eu efficitur metus odio a augue. 
-      Cras lacinia et massa vitae rutrum. Nam non cursus mi. Duis consectetur, enim vel fermentum lobortis, dolor augue gravida massa, 
-      ut consectetur enim ex sed felis. Donec sed massa varius, mattis purus nec, bibendum sapien. Vivamus at lacinia risus. 
-      Phasellus nec turpis tortor.`,
-    'secondParagraph-en': `Vestibulum posuere quis ante sit amet vulputate. In lorem sem, tempus id erat in, consectetur luctus turpis. Cras ac 
-      risus odio. Etiam tempor ligula eu mi dapibus placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit 
-      amet, consectetur adipiscing elit. Maecenas tristique justo id ante sagittis, vel placerat magna viverra. Morbi sodales urna vel arcu tincidunt, 
-      a bibendum arcu tempor. Mauris vulputate rhoncus porttitor.`,
-    'secondParagraph-es': `Vestibulum posuere quis ante sit amet vulputate. In lorem sem, tempus id erat in, consectetur luctus turpis. Cras ac 
-      risus odio. Etiam tempor ligula eu mi dapibus placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit 
-      amet, consectetur adipiscing elit. Maecenas tristique justo id ante sagittis, vel placerat magna viverra. Morbi sodales urna vel arcu tincidunt, 
-      a bibendum arcu tempor. Mauris vulputate rhoncus porttitor.`,
+    'firstParagraph-en': `This personal project was created with the aim of improving my understanding and practice in Laravel, one of the most popular 
+      frameworks for backend development. The application consists of a Restful API for a dynamic blog, designed to offer key functionalities such as post 
+      categorization, a comment and like system, and user management. I implemented JWT authentication to ensure secure and private access to the blog's 
+      features. The MongoDB database is located in the cloud via MongoDB Atlas, providing scalable and efficient storage. Additionally, the project is 
+      deployed on fly.io, a platform that facilitates the management and scalability of applications in the cloud. This project not only allowed me to 
+      delve deeper into Laravel and other modern technologies, but also gave me practical experience in developing and deploying a complete and robust backend.`,
+    'firstParagraph-es': `Este proyecto personal fue creado con el objetivo de mejorar mi comprensión y práctica en Laravel, uno de los frameworks 
+      más populares para el desarrollo backend. La aplicación consiste en una API Restful para un blog dinámico, diseñada para ofrecer funcionalidades 
+      clave como la categorización de publicaciones, un sistema de comentarios y likes, y la gestión de usuarios. Implementé autenticación JWT para 
+      garantizar un acceso seguro y privado a las funciones del blog. La base de datos MongoDB se encuentra en la nube a través de MongoDB Atlas, 
+      proporcionando almacenamiento escalable y eficiente. Además, el proyecto está desplegado en fly.io, una plataforma que facilita la gestión 
+      y escalabilidad de aplicaciones en la nube. Este proyecto no solo me permitió profundizar en Laravel y otras tecnologías modernas, sino que 
+      también me brindó una experiencia práctica en el desarrollo y despliegue de un backend completo y robusto.`,
+    'secondParagraph-en': `In this application, I implemented a robust JWT authentication middleware that ensures the integrity and security of all APIs. 
+      This middleware verifies that the token included in the request header is valid; otherwise, the request is rejected to protect the application's data 
+      and functionality. The API includes a variety of CRUD (create, read, update, and delete) operations for posts, categories, comments, and users, 
+      facilitating complete and flexible content management. In addition, I incorporated a like functionality for posts, allowing users to interact and 
+      rate the content. I also enabled the option to upload images to posts, enriching the user experience and offering a more visually appealing presentation 
+      of the content. This comprehensive approach not only provides a dynamic and secure platform, but also significantly improves interaction and content management on the blog.`,
+    'secondParagraph-es': `En esta aplicación, implementé un robusto middleware de autenticación JWT que asegura la integridad y seguridad de todas 
+      las APIs. Este middleware verifica que el token incluido en la cabecera de la petición sea válido; en caso contrario, la solicitud es rechazada 
+      para proteger los datos y funcionalidades de la aplicación. La API incluye una variedad de operaciones CRUD (crear, leer, actualizar y eliminar) 
+      para posts, categorías, comentarios y usuarios, facilitando una gestión completa y flexible del contenido. Además, incorporé una funcionalidad de 
+      likes para los posts, permitiendo a los usuarios interactuar y valorar el contenido. También se habilitó la opción de subir imágenes en los posts, 
+      enriqueciendo la experiencia del usuario y ofreciendo una presentación más visualmente atractiva del contenido. Este enfoque integral no solo 
+      proporciona una plataforma dinámica y segura, sino que también mejora significativamente la interacción y el manejo del contenido en el blog.`,
     link: 'https://github.com/JoanRojasMejia/backend-blog',
     images: ['/project-6-1.webp']
   }
