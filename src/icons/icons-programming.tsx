@@ -148,3 +148,12 @@ export const Laravel = (props: React.SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
+
+export const Vue = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 512 512" {...props}>
+    <path
+      fill="currentColor"
+      d="M512 34.512L256 477.488L0 34.512h41.601L256 405.502l214.399-370.99zM256 135.247L196.818 34.512h-89.766L256 292.248L404.948 34.512h-89.766z"
+    />
+  </svg>
+)

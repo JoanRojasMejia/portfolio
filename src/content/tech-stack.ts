@@ -27,6 +27,14 @@ export const technologiesAndFrameworks: TechnologyAndFramework[] = [
       'Es una biblioteca JavaScript para crear interfaces de usuario interactivas y eficientes con componentes reutilizables y declarativos.'
   },
   {
+    name: 'Vue',
+    logo: '/vue.webp',
+    url: 'https://vuejs.org/',
+    'description-en': 'It is a Javascript framework that uses "high decoupling", which allows to progressively create user interfaces.',
+    'description-es':
+    'Es un framework de Javascript que utiliza "alto desacoplamiento", lo que permite crear progresivamente interfaces de usuario.'
+  },
+  {
     name: 'TypeScript',
     logo: '/typescript.webp',
     url: 'https://www.typescriptlang.org/',

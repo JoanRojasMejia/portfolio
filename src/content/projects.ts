@@ -193,17 +193,17 @@ export const projects: Project[] = [
     'description-en': 'Identification management platform for Ecuadorians.',
     'description-es': 'Plataforma de gestion identificatoria de los ecuatorianos.',
     image: '/project-5.webp',
-    tags: ['React', 'Nodejs', 'JavaScript', 'MongoDB', 'Sass', 'Git'],
+    tags: ['Vue', 'JavaScript', 'Nodejs', 'MongoDB', 'Sass', 'Git'],
     state: 'private',
     year: '2023 - 2024',
     'firstParagraph-en': `A collaborative project with the government of Ecuador to develop a platform that would centralize the management of all the country's procedures, 
       from passport applications to vehicle registration. The main objective of this platform was to streamline processes and reduce corruption by offering a more transparent 
-      and efficient system. We used React JS for the frontend, providing a modern and easy-to-use interface, while in the backend we used Node JS to ensure optimal performance. 
+      and efficient system. We used Vue JS for the frontend, providing a modern and easy-to-use interface, while in the backend we used Node JS to ensure optimal performance. 
       For data storage, a non-relational database was implemented, allowing for flexible and scalable management of information. This project marked a significant advance in the 
       digitalization of public services in Ecuador.`,
     'firstParagraph-es': `Un proyecto colaborativo con el gobierno de Ecuador para desarrollar una plataforma que centralizara la gestión de todos los trámites del país, 
       desde la solicitud de pasaportes hasta la inscripción de vehículos. El objetivo principal de esta plataforma fue agilizar los procesos y reducir la corrupción al ofrecer 
-      un sistema más transparente y eficiente. Utilizamos React JS para el frontend, proporcionando una interfaz moderna y fácil de usar, mientras que en el backend empleamos 
+      un sistema más transparente y eficiente. Utilizamos Vue JS para el frontend, proporcionando una interfaz moderna y fácil de usar, mientras que en el backend empleamos 
       Node JS para garantizar un rendimiento óptimo. Para el almacenamiento de datos, se implementó una base de datos no relacional, que permitió una gestión flexible y escalable 
       de la información. Este proyecto marcó un avance significativo en la digitalización de los servicios públicos en Ecuador.`,
     'secondParagraph-en': `In this project, I played the role of frontend development lead, supervising a team of two developers. My responsibilities included defining the 
