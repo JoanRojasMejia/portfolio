@@ -141,5 +141,17 @@ export const timelines: Timeline[] = [
     tags: ['certifications'],
     image: '/timeline-11.webp',
     link: 'https://platzi.com/p/rarojasf/curso/2357-golang-intermedio/diploma/detalle/'
+  },
+  {
+    date: 'Oct 1, 2024',
+    'title-es': 'Creación de páginas web con Astro',
+    'title-en': 'Creating web pages with Astro',
+    'description-es':
+      'Este curso enseña a desarrollar sitios rápidos y optimizados, utilizando componentes modernos, integraciones con frameworks populares y técnicas avanzadas de rendimiento para crear experiencias web eficientes y escalables.',
+    'description-en':
+      'This course teaches how to develop fast and optimized sites, using modern components, integrations with popular frameworks and advanced performance techniques to create efficient and scalable web experiences.',
+    tags: ['certifications'],
+    image: '/timeline-12.webp',
+    link: 'https://platzi.com/p/sebas.rojas.mejia/curso/6207-astro/diploma/detalle/'
   }
 ]
