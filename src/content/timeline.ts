@@ -153,5 +153,17 @@ export const timelines: Timeline[] = [
     tags: ['certifications'],
     image: '/timeline-12.webp',
     link: 'https://platzi.com/p/sebas.rojas.mejia/curso/6207-astro/diploma/detalle/'
+  },
+  {
+    date: 'Oct 15, 2024',
+    'title-es': 'Llegada a Global66',
+    'title-en': 'Arrival at Global66',
+    'description-es':
+      'Ingreso a la empresa Global66, en la que tengo el cargo de Senior Frontend Developer, y desarrollo la aplicación movil de la fintech que globalizara el sistema financiero.',
+    'description-en':
+      'Entry into the company Global66, where I hold the position of Senior Frontend Developer, and develop the mobile application of the fintech that will globalize the financial system.',
+    tags: ['work'],
+    image: '/timeline-13.webp',
+    link: 'https://global66.com/'
   }
 ]
