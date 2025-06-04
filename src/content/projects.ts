@@ -22,7 +22,30 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: '1',
+    id: '7',
+    'title-en': 'Global66 - Design system',
+    'title-es': 'Global66 - Design system',
+    'description-en': 'Design system for Global66, a fintech company.',
+    'description-es': 'Sistema de diseño para Global66, una empresa fintech.',
+    image: '/project-7.webp',
+    images: ['/project-7-1.webp'],
+    tags: ['Vue', 'Tailwindcss', 'TypeScript', 'Git'],
+    state: 'public',
+    year: '2024 - now',
+    'firstParagraph-en': `This project is a design system developed for Global66, a fintech company that offers financial services such as money transfers,
+      currency exchange, and payment solutions. The design system was created to provide a consistent and cohesive user experience across all of the company's
+      digital products. It includes a comprehensive set of reusable components, design guidelines, and best practices for UI/UX design. The system was built using
+      Vue.js, a popular JavaScript framework for building user interfaces, and Tailwind CSS, a utility-first CSS framework that allows for rapid and flexible styling.
+      The design system is designed to be modular and scalable, allowing for easy integration into existing and future projects.`,
+    'firstParagraph-es': `Este proyecto es un sistema de diseño desarrollado para Global66, una empresa fintech que ofrece servicios financieros como transferencias de dinero,
+      cambio de divisas y soluciones de pago. El sistema de diseño fue creado para proporcionar una experiencia de usuario consistente y cohesiva en todos los productos
+      digitales de la empresa. Incluye un conjunto completo de componentes reutilizables, pautas de diseño y mejores prácticas para el diseño UI/UX. El sistema fue construido
+      utilizando Vue.js, un popular framework de JavaScript para construir interfaces de usuario, y Tailwind CSS, un framework CSS de utilidad que permite un estilo rápido y flexible.
+      El sistema de diseño está diseñado para ser modular y escalable, lo que permite una fácil integración en proyectos existentes y futuros.`,
+    link: 'https://github.com/Flash-Global66/global-design-system'
+  },
+  {
+    id: '6',
     'title-en': 'Sales force',
     'title-es': 'Fuerza de ventas',
     'description-en': 'Dynamic application for sales force and reports adaptable to businesses.',
@@ -30,7 +53,7 @@ export const projects: Project[] = [
     image: '/project-1.webp',
     tags: ['React', 'Sass', 'TypeScript', 'GraphQL', 'Git'],
     state: 'private',
-    year: '2022 - now',
+    year: '2022 - 2024',
     'firstParagraph-en': `This project aims to comprehensively improve the operations of companies dedicated to the export of food and raw materials. 
       Key aspects addressed include: order management, user administration on the platform, integrations with external systems, report generation, 
       dashboard creation, route tracking through maps, and various additional operational tools. My role as leader of the frontend development team 
@@ -67,7 +90,7 @@ export const projects: Project[] = [
     images: ['/project-1-1.webp', '/project-1-2.webp', '/project-1-3.webp']
   },
   {
-    id: '2',
+    id: '5',
     'title-en': 'Dynamic components',
     'title-es': 'Componentes dinámicos',
     'description-en': 'Library of dynamic components adapted for information visualization.',
@@ -114,7 +137,7 @@ export const projects: Project[] = [
     link: 'https://dynamic-components-storybook.netlify.app/?path=/docs/example-dynamictable--docs'
   },
   {
-    id: '3',
+    id: '4',
     'title-en': 'Apolo UI',
     'title-es': 'Apolo UI',
     'description-en': 'Reusable component library with system ui for react js.',
@@ -150,7 +173,7 @@ export const projects: Project[] = [
     link: 'https://www.npmjs.com/package/@tingenio/apolo-ui'
   },
   {
-    id: '4',
+    id: '3',
     'title-en': 'ASED',
     'title-es': 'ASED',
     'description-en': 'Business management for an exterior design company.',
@@ -187,7 +210,7 @@ export const projects: Project[] = [
     images: ['/project-4-1.webp', '/project-4-2.webp']
   },
   {
-    id: '5',
+    id: '2',
     'title-en': 'Your VIP procedures',
     'title-es': 'Tus tramites VIP',
     'description-en': 'Identification management platform for Ecuadorians.',
@@ -233,7 +256,7 @@ export const projects: Project[] = [
     images: ['/project-5-1.webp', '/project-5-2.webp', '/project-5-3.webp']
   },
   {
-    id: '6',
+    id: '1',
     'title-en': 'Backend - Blog API',
     'title-es': 'Backend - Blog API',
     'description-en': 'Backend developed in Laravel for a dynamic blog.',

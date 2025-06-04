@@ -16,6 +16,11 @@ const {
   link,
   tags
 } = timeline
+
+const tagColors = {
+  certifications: 'text-green-900 bg-green-300',
+  work: 'text-blue-900 bg-blue-300'
+}
 ---
 
 <div class="w-full relative">
@@ -40,7 +45,9 @@ const {
             <div class="flex items-center gap-[6px]">
               {
                 tags.map((tag) => (
-                  <span class="text-[11px] font-bold rounded-[9px] py-[1px] px-[6px] text-pink-900 bg-pink-300 leading-[14px] relative">
+                  <span
+                    class={`text-[11px] font-bold rounded-[9px] py-[1px] px-[6px] leading-[14px] relative ${tagColors[tag]}`}
+                  >
                     {tag}
                   </span>
                 ))

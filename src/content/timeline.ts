@@ -4,7 +4,7 @@ export interface Timeline {
   'title-es': string
   'description-en': string
   'description-es': string
-  tags: string[]
+  tags: ('certifications' | 'work')[]
   image: string
   link: string
 }
@@ -165,5 +165,17 @@ export const timelines: Timeline[] = [
     tags: ['work'],
     image: '/timeline-13.webp',
     link: 'https://global66.com/'
+  },
+  {
+    date: 'Jun 2, 2025',
+    'title-es': 'Curso de Docker para desarrolladores',
+    'title-en': 'Docker Course for Developers',
+    'description-es':
+      'Este curso enseña a utilizar Docker para crear, desplegar y gestionar aplicaciones de manera eficiente, cubriendo desde la creación de contenedores hasta la orquestación con Docker Compose y Kubernetes.',
+    'description-en':
+      'This course teaches how to use Docker to efficiently create, deploy, and manage applications, covering everything from container creation to orchestration with Docker Compose and Kubernetes.',
+    tags: ['certifications'],
+    image: '/timeline-14.webp',
+    link: 'https://www.udemy.com/certificate/UC-797a3823-b4e2-461a-873d-70da0eef4dd9/'
   }
 ]
