@@ -4,17 +4,46 @@ import '../styles/global.css'
 
 interface Props {
   title: string
+  description?: string
+  image?: string
 }
 
-const { title } = Astro.props
+const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
+
+const defaultDescriptions = {
+  en: 'Joan Rojas Mejia, FullStack developer. Explore my projects, professional timeline, tech stack and the books that shaped how I build software.',
+  es: 'Joan Rojas Mejia, desarrollador FullStack. Explora mis proyectos, mi trayectoria profesional, mi stack tecnológico y los libros que han moldeado mi forma de desarrollar software.'
+}
+
+const ogLocales = { en: 'en_US', es: 'es_ES' }
+
+const { title, description = defaultDescriptions[lang], image = '/og-image.jpg' } = Astro.props
+
+// Link previews (Open Graph / Twitter) need absolute URLs
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const imageURL = new URL(image, Astro.site)
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang={lang} class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Portfolio Joan Rojas Mejia" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Joan Rojas Mejia" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:locale" content={ogLocales[lang]} />
+    <meta property="og:locale:alternate" content={ogLocales[lang === 'en' ? 'es' : 'en']} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
     <link rel="icon" type="image/svg+xml" href="/glasess.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
