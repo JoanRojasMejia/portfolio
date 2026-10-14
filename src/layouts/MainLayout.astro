@@ -6,10 +6,10 @@ import Layout from './Layout.astro'
 
 <Layout title="joan rojas ✦ developer">
   <div
-    class="min-h-screen relative before:absolute before:inset-0 before:z-[-100] before:bg-[url(/header-gradient.svg),url(/footer-gradient.svg)] before:bg-no-repeat before:bg-md before:bg-position-gradient"
+    class="min-h-screen relative overflow-x-clip before:absolute before:inset-0 before:z-[-100] before:bg-[url(/header-gradient.svg),url(/footer-gradient.svg)] before:bg-no-repeat before:bg-md before:bg-position-gradient"
   >
     <Navbar />
-    <main class="relative w-[708px] m-auto mt-14">
+    <main class="relative w-full max-w-[708px] m-auto mt-8 px-4 sm:mt-14 sm:px-0">
       <slot />
       <Footer />
     </main>

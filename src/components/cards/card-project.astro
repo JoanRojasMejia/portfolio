@@ -38,10 +38,10 @@ const {
           width="150"
           height="150"
           loading="eager"
-          class="object-cover w-[200px] h-[200px] rounded-xl"
+          class="object-cover w-full aspect-square rounded-xl"
         /><noscript></noscript>
         <span
-          class={`absolute top-0 ml-2 mt-2 uppercase font-bold py-[1px] px-[6px]
+          class={`absolute top-0 ml-2 mt-2 uppercase font-bold py-px px-[6px]
           ${state === 'private' ? 'bg-rose-700' : 'bg-teal-700'} text-white rounded-[9px] text-[10px]`}
         >
           {state}

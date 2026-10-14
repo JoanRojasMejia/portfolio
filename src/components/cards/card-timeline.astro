@@ -25,13 +25,13 @@ const tagColors = {
 
 <div class="w-full relative">
   <div class="flex justify-center dark:text-white text-dark">
-    <div class="min-w-[100px] mr-5 -mt-1">
+    <div class="hidden sm:block min-w-[100px] mr-5 -mt-1">
       <p class="text-right text-sm font-semibold">{date}</p>
     </div>
     <div
-      class="w-[420px] relative pl-4 pb-12 border-l-[1px] border-[rgba(34,36,44,.15)] dark:border-[rgba(236,237,238,.15)] before:bg-violet-500 before:border
+      class="w-full sm:w-[420px] relative pl-4 pb-8 sm:pb-12 border-l border-[rgba(34,36,44,.15)] dark:border-[rgba(236,237,238,.15)] before:bg-violet-500 before:border
     before:border-[rgba(236,237,238,.15)] before:block before:float-left before:size-[11px] before:absolute before:rounded-xl
-      before:left-[-6.5px] before:top-[-0.125rem]"
+      before:left-[-6.5px] before:-top-0.5"
     >
       <div class="relative">
         <a
@@ -42,11 +42,12 @@ const tagColors = {
           before:hover:bg-hover-background-light dark:before:hover:bg-hover-background"
         >
           <div>
-            <div class="flex items-center gap-[6px]">
+            <div class="flex flex-wrap items-center gap-[6px]">
+              <span class="sm:hidden text-xs font-semibold opacity-60 mr-1">{date}</span>
               {
                 tags.map((tag) => (
                   <span
-                    class={`text-[11px] font-bold rounded-[9px] py-[1px] px-[6px] leading-[14px] relative ${tagColors[tag]}`}
+                    class={`text-[11px] font-bold rounded-[9px] py-px px-[6px] leading-[14px] relative ${tagColors[tag]}`}
                   >
                     {tag}
                   </span>

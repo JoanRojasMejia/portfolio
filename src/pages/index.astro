@@ -11,10 +11,10 @@ import CardProject from '@components/cards/card-project.astro'
 ---
 
 <MainLayout>
-  <div class="px-4 pt-4 flex flex-col justify-center">
+  <div class="sm:px-4 pt-4 flex flex-col justify-center">
     <section class="flex items-center gap-4">
       <Image
-        class="w-28 h-28 rounded-full"
+        class="size-20 sm:size-28 rounded-full shrink-0"
         width="150"
         height="150"
         loading="eager"
@@ -43,7 +43,7 @@ import CardProject from '@components/cards/card-project.astro'
     </section>
   </div>
   <section class="pt-8">
-    <p class="text-xl text-pretty font-normal text-dark dark:text-white">
+    <p class="text-lg sm:text-xl text-pretty font-normal text-dark dark:text-white">
       I am a FullStack developer with over three years of experience in the development field. I
       have led teams and worked on projects of various sizes. I am passionate about technology and
       programming, enjoy learning new things, and like to stay up-to-date with the latest trends in
@@ -56,20 +56,20 @@ import CardProject from '@components/cards/card-project.astro'
   <section class="mt-14">
     <div class="flex flex-row justify-between items-center">
       <h6
-        class="text-light-gray dark:text-[var(--light-gray)] uppercase text-sm opacity-70 tracking-[2px] font-semibold"
+        class="text-light-gray dark:text-(--light-gray) uppercase text-sm opacity-70 tracking-[2px] font-semibold"
       >
         Current Projects
       </h6>
       <a
         href="/work"
-        class="dark:text-[var(--light-gray)] text-xs font-semibold capitalize bg-text-sky-gradient bg-clip-text bg-repeat bg-100%"
+        class="dark:text-(--light-gray) text-xs font-semibold capitalize bg-text-sky-gradient bg-clip-text bg-repeat bg-100%"
         style="-webkit-text-fill-color:transparent">All Works ▸</a
       >
     </div>
   </section>
   <section class="pt-5">
     <div class="flex flex-col items-center justify-center">
-      <div class="relative grid gap-[14px] mt-[6px] p-1 grid-cols-3 scale-[1.04]">
+      <div class="relative grid gap-[14px] mt-[6px] p-1 grid-cols-1 min-[480px]:grid-cols-2 sm:grid-cols-3 sm:scale-[1.04] w-full">
         {
           projects
             .toSpliced(6, 6)
@@ -80,19 +80,19 @@ import CardProject from '@components/cards/card-project.astro'
   </section>
   <section class="mt-11">
     <div
-      class="bg-hover-background-light dark:bg-hover-background flex rounded-[20px] items-center p-4"
+      class="bg-hover-background-light dark:bg-hover-background flex rounded-[20px] items-center p-2 sm:p-4"
     >
-      <div class="p-8 z-10">
+      <div class="p-4 sm:p-8 z-10">
         <h2
-          class="font-semibold bg-repeat bg-clip-text bg-100% bg-text-gradient text-4xl tracking-tight"
+          class="font-semibold bg-repeat bg-clip-text bg-100% bg-text-gradient text-3xl sm:text-4xl tracking-tight"
           style="-webkit-text-fill-color:transparent"
         >
           Contact me!
         </h2>
-        <div class="flex mt-3 gap-6">
+        <div class="flex flex-wrap mt-3 gap-x-6 gap-y-2">
           <a
             href="mailto:sebas.rojas.mejia@gmail.com?subject=Saying Hello!!!"
-            class="flex items-center gap-2 font-medium bg-repeat bg-clip-text bg-100% bg-text-gradient text-[var(--retro-2c)]"
+            class="flex items-center gap-2 font-medium bg-repeat bg-clip-text bg-100% bg-text-gradient text-(--retro-2c)"
             style="-webkit-text-fill-color:transparent"
           >
             <Mail />
@@ -100,7 +100,7 @@ import CardProject from '@components/cards/card-project.astro'
           </a>
           <a
             href="https://www.linkedin.com/in/joan-rojas-mejia/"
-            class="flex items-center gap-2 font-medium bg-repeat bg-clip-text bg-100% bg-text-gradient text-[var(--retro-2c)]"
+            class="flex items-center gap-2 font-medium bg-repeat bg-clip-text bg-100% bg-text-gradient text-(--retro-2c)"
             style="-webkit-text-fill-color:transparent"
             target="_blank"
           >
@@ -108,7 +108,7 @@ import CardProject from '@components/cards/card-project.astro'
             Joan Rojas
           </a>
         </div>
-        <p class="my-5 font-normal text-xl tracking-[-0.3px] opacity-80 max-w-80">
+        <p class="my-5 font-normal text-lg sm:text-xl tracking-[-0.3px] opacity-80 max-w-80">
           Do you want to create something amazing? Or do you have any questions? Send an email or
           message on linkedin.
         </p>
@@ -124,7 +124,7 @@ import CardProject from '@components/cards/card-project.astro'
           </span>
         </div>
       </div>
-      <div class="text-right z-auto">
+      <div class="hidden sm:block text-right z-auto">
         <Image
           alt={'chat'}
           src="/chat.png"

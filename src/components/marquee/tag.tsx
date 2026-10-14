@@ -4,7 +4,7 @@ type props = {
   background: string
   color: string
   title: string
-  Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element
+  Icon: (props: React.SVGProps<SVGSVGElement>) => React.JSX.Element
   className?: string
 }
 
