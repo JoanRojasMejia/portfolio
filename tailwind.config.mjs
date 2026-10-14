@@ -9,13 +9,6 @@ export default {
         'light-gray': 'rgba(74,87,111,.6)',
         dark: '#22242C'
       },
-      backgroundSize: {
-        md: '1400px',
-        '100%': '100%'
-      },
-      backgroundPosition: {
-        'position-gradient': 'center top, center bottom'
-      },
       backgroundImage: {
         'text-gradient':
           'linear-gradient(90.42deg, #4ab1f1 0.58%,#566cec 37.22%,#d749af 73.87%, #ff7c51 112.26%)',
