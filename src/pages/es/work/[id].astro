@@ -20,7 +20,10 @@ if (!project) {
 }
 ---
 
-<MainLayout>
+<MainLayout
+  title={`${project[`title-${lang}`]} ✦ joan rojas`}
+  description={project[`description-${lang}`]}
+>
   <div class="sm:px-4 pt-[14px] flex flex-col justify-center">
     <div class="relative flex flex-col mb-14" transition:name=`project ${id} box`>
       <div class="text-center max-w-[500px] m-auto px-2 py-6 sm:p-6 flex flex-col items-center">
