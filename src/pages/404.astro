@@ -1,5 +1,76 @@
 ---
+import { Image } from 'astro:assets'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import Grille from '@icons/grille.astro'
+import MainLayout from '@layouts/MainLayout.astro'
 
+// The 404 page serves every locale, so the language comes from the requested URL
+const lang: 'es' | 'en' = Astro.url.pathname.split('/').filter(Boolean)[0] === 'es' ? 'es' : 'en'
+
+const i18n = {
+  es: {
+    title: 'Página no encontrada',
+    description: 'La página que buscas no existe o fue movida. Puedes volver al inicio o ver mis proyectos.',
+    home: 'Volver al inicio',
+    work: 'Ver proyectos'
+  },
+  en: {
+    title: 'Page not found',
+    description: "The page you're looking for doesn't exist or has been moved. You can go back home or browse my projects.",
+    home: 'Back to home',
+    work: 'Browse projects'
+  }
+}
+
+const homeURL = getRelativeLocaleUrl(lang, '')
+const workURL = getRelativeLocaleUrl(lang, 'work')
 ---
 
-<div>entraste mal</div>
+<MainLayout>
+  <div class="sm:px-4 pt-[14px] flex flex-col justify-center" data-not-found>
+    <div class="relative flex flex-col mb-14">
+      <div class="text-center max-w-[500px] m-auto px-2 py-6 sm:p-6 flex flex-col items-center">
+        <span
+          class="inline-block text-7xl sm:text-8xl font-bold tracking-[-2px] bg-repeat bg-clip-text bg-100% bg-dream-gradient"
+          style="-webkit-text-fill-color:transparent"
+        >
+          404
+        </span>
+        <h1 class="text-2xl sm:text-3xl mt-2 mb-3 font-bold tracking-[-1.2px]">
+          {i18n[lang].title}
+        </h1>
+        <p class="text-lg tracking-[-0.28px] leading-[140%] text-balance opacity-80">
+          {i18n[lang].description}
+        </p>
+        <div class="flex justify-center items-center my-3">
+          <Grille className="opacity-20 scale-y-[1] scale-x-[-1]" />
+          <span class="w-max flex h-min">
+            <Image
+              loading="eager"
+              class="dark:invert mx-6"
+              alt={'dots'}
+              src="/three-dots.svg"
+              width="35"
+              height="35"
+            />
+          </span>
+          <Grille className="opacity-20 " />
+        </div>
+        <div class="flex flex-wrap justify-center gap-3 mt-2">
+          <a
+            href={homeURL}
+            class="rounded-[18px] flex items-center font-medium text-base text-white bg-dream-gradient py-2 px-5 leading-5 hover:opacity-80 transition-all duration-300"
+          >
+            {i18n[lang].home}
+          </a>
+          <a
+            href={workURL}
+            class="rounded-[18px] flex items-center font-medium text-base py-2 px-5 leading-5 border border-[rgba(48,52,77,.15)] dark:border-[var(--grey-100)] hover:bg-hover-background-light dark:hover:bg-hover-background transition-all duration-300"
+          >
+            {i18n[lang].work}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

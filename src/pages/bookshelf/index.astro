@@ -7,9 +7,9 @@ import MainLayout from '@layouts/MainLayout.astro'
 ---
 
 <MainLayout>
-  <div class="px-4 pt-[14px] flex flex-col justify-center">
+  <div class="sm:px-4 pt-[14px] flex flex-col justify-center">
     <div class="relative flex flex-col mb-14">
-      <div class="text-center max-w-[500px] m-auto p-6 flex flex-col items-center">
+      <div class="text-center max-w-[500px] m-auto px-2 py-6 sm:p-6 flex flex-col items-center">
         <h4
           class="inline-block text-3xl mb-3 font-bold tracking-[-1.2px] bg-repeat bg-clip-text bg-100% bg-rainbow-gradient"
           style="-webkit-text-fill-color:transparent"
@@ -35,7 +35,7 @@ import MainLayout from '@layouts/MainLayout.astro'
         </div>
       </div>
       <section class="mt-[15px]">
-        <div class="relative mx-auto columns-3 gap-3 p-1">
+        <div class="relative mx-auto columns-2 sm:columns-3 gap-3 p-1">
           {
             books.map((book) => (
               <a

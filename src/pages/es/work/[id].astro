@@ -12,13 +12,18 @@ import { BorderBeam } from '@components/magic-ui/border-beam'
 const lang: 'es' | 'en' = (Astro.currentLocale as 'en' | 'es') ?? 'en'
 
 const { id } = Astro.params
-const project = projects.find((project) => project.id === id)!
+const project = projects.find((project) => project.id === id)
+
+if (!project) {
+  // An empty 404 response makes Astro render src/pages/404.astro
+  return new Response(null, { status: 404, statusText: 'Not found' })
+}
 ---
 
 <MainLayout>
-  <div class="px-4 pt-[14px] flex flex-col justify-center">
+  <div class="sm:px-4 pt-[14px] flex flex-col justify-center">
     <div class="relative flex flex-col mb-14" transition:name=`project ${id} box`>
-      <div class="text-center max-w-[500px] m-auto p-6 flex flex-col items-center">
+      <div class="text-center max-w-[500px] m-auto px-2 py-6 sm:p-6 flex flex-col items-center">
         <h4
           class="inline-block text-3xl mb-3 font-bold tracking-[-1.2px] bg-repeat bg-clip-text bg-100% bg-dream-gradient"
           style="-webkit-text-fill-color:transparent"
@@ -65,8 +70,8 @@ const project = projects.find((project) => project.id === id)!
           <Grille className="opacity-20 " />
         </div>
       </div>
-      <div class="pt-2 flex gap-5">
-        <div class="relative w-1/2 rounded-xl">
+      <div class="pt-2 flex flex-col sm:flex-row gap-5">
+        <div class="relative w-full sm:w-1/2 rounded-xl">
           <Image
             alt={`project-${id}`}
             transition:name=`project ${id} image`
@@ -80,7 +85,7 @@ const project = projects.find((project) => project.id === id)!
         </div>
         {
           project?.[`firstParagraph-${lang}`] && (
-            <p class="text-sm tracking-[-0.25px] leading-[150%] text-pretty text-justify w-1/2">
+            <p class="text-sm tracking-[-0.25px] leading-[150%] text-pretty sm:text-justify w-full sm:w-1/2">
               {project?.[`firstParagraph-${lang}`]}
             </p>
           )
@@ -88,7 +93,7 @@ const project = projects.find((project) => project.id === id)!
       </div>
       {
         project?.[`secondParagraph-${lang}`] && (
-          <p class="text-sm tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
+          <p class="text-sm tracking-[-0.25px] leading-[150%] text-pretty sm:text-justify pt-5">
             {project?.[`secondParagraph-${lang}`]}
           </p>
         )
@@ -107,7 +112,7 @@ const project = projects.find((project) => project.id === id)!
       }
       {
         project?.[`thirdParagraph-${lang}`] && (
-          <p class="text-sm tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
+          <p class="text-sm tracking-[-0.25px] leading-[150%] text-pretty sm:text-justify pt-5">
             {project?.[`thirdParagraph-${lang}`]}
           </p>
         )
@@ -126,7 +131,7 @@ const project = projects.find((project) => project.id === id)!
       }
       {
         project?.[`fourthParagraph-${lang}`] && (
-          <p class="text-sm tracking-[-0.25px] leading-[150%] text-pretty text-justify pt-5">
+          <p class="text-sm tracking-[-0.25px] leading-[150%] text-pretty sm:text-justify pt-5">
             {project?.[`fourthParagraph-${lang}`]}
           </p>
         )

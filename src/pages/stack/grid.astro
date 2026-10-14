@@ -9,9 +9,9 @@ import MainLayout from '@layouts/MainLayout.astro'
 ---
 
 <MainLayout>
-  <div class="px-4 pt-[14px] flex flex-col justify-center">
+  <div class="sm:px-4 pt-[14px] flex flex-col justify-center">
     <div class="relative flex flex-col">
-      <div class="text-center max-w-[500px] m-auto p-6 flex flex-col items-center">
+      <div class="text-center max-w-[500px] m-auto px-2 py-6 sm:p-6 flex flex-col items-center">
         <h4
           class="inline-block text-3xl mb-3 font-bold tracking-[-1.2px] bg-repeat bg-clip-text bg-100% bg-text-gradient"
           style="-webkit-text-fill-color:transparent"
@@ -59,7 +59,7 @@ import MainLayout from '@layouts/MainLayout.astro'
         >
           languages and frameworks
         </h4>
-        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
+        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-3 min-[480px]:grid-cols-4 sm:grid-cols-5">
           {technologiesAndFrameworks.map((tech) => <SquareStack tech={tech} />)}
         </div>
         <h4
@@ -67,7 +67,7 @@ import MainLayout from '@layouts/MainLayout.astro'
         >
           Tools
         </h4>
-        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
+        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-3 min-[480px]:grid-cols-4 sm:grid-cols-5">
           {tools.map((tool) => <SquareStack tech={tool} />)}
         </div>
         <h4
@@ -75,7 +75,7 @@ import MainLayout from '@layouts/MainLayout.astro'
         >
           Devices
         </h4>
-        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-5">
+        <div class="relative mt-3 mx-auto grid gap-2 p-1 w-fit grid-cols-3 min-[480px]:grid-cols-4 sm:grid-cols-5">
           {devices.map((device) => <SquareStack tech={device} />)}
         </div>
       </section>
