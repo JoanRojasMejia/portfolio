@@ -59,14 +59,14 @@ const menuLabel = lang === 'es' ? 'Abrir menú' : 'Open menu'
 <nav class="w-full max-w-[708px] m-auto pt-4 px-4 sm:pt-6 sm:px-0">
   <div class="relative">
     <div
-      class="backdrop-blur-2xl px-3 sm:px-4 py-[10px] flex flex-row justify-between bg-[rgba(255,255,255,.3)] dark:bg-[var(--nav-bg)] rounded-xl"
+      class="backdrop-blur-2xl px-3 sm:px-4 py-[10px] flex flex-row justify-between bg-[rgba(255,255,255,.3)] dark:bg-(--nav-bg) rounded-xl"
     >
       <div class="flex items-center max-h-10 h-10 w-full">
         <a href={defaultPage}>
           <AnimatedGradientText>
             <span
               class={cn(
-                `animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text 
+                `animate-gradient bg-linear-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-size-[var(--bg-size)_100%] bg-clip-text 
                 text-transparent relative top-[2px] h-9`
               )}
             >
@@ -90,7 +90,7 @@ const menuLabel = lang === 'es' ? 'Abrir menú' : 'Open menu'
       </div>
       <div class="flex items-center max-h-10 h-10">
         <div
-          class="hidden sm:flex items-center max-h-10 mr-3 border-r border-[rgba(48,52,77,.1)] dark:border-[var(--grey-100)]"
+          class="hidden sm:flex items-center max-h-10 mr-3 border-r border-[rgba(48,52,77,.1)] dark:border-(--grey-100)"
         >
           <a href="https://github.com/JoanRojasMejia" class="py-[2px] px-3" target="_blank"
             ><Github />
@@ -152,7 +152,7 @@ const menuLabel = lang === 'es' ? 'Abrir menú' : 'Open menu'
         }
       </ul>
       <div
-        class="sm:hidden flex items-center gap-1 mt-1 pt-2 px-1 border-t border-[rgba(48,52,77,.1)] dark:border-[var(--grey-100)]"
+        class="sm:hidden flex items-center gap-1 mt-1 pt-2 px-1 border-t border-[rgba(48,52,77,.1)] dark:border-(--grey-100)"
       >
         <a href="https://github.com/JoanRojasMejia" class="p-2" target="_blank"><Github /></a>
         <a href="https://www.linkedin.com/in/joan-rojas-mejia/" target="_blank" class="p-2">

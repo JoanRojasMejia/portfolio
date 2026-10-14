@@ -1,3 +1,4 @@
+import type { JSX, SVGProps } from 'react'
 import {
   Astrojs,
   Docker,
@@ -19,7 +20,7 @@ import {
 
 type Technology = {
   title: string
-  Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element
+  Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element
   background: string
   color: string
   order: number

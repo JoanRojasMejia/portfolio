@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@config "../../tailwind.config.mjs";
+
+/*
+  Tailwind v4 changed some defaults; keep the v3 behavior the site was designed with.
+  https://tailwindcss.com/docs/upgrade-guide#changes-from-v3
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}

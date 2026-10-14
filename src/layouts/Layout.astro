@@ -1,5 +1,6 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
+import '../styles/global.css'
 
 interface Props {
   title: string
@@ -20,9 +21,9 @@ const { title } = Astro.props
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions fallback="none" />
+    <ClientRouter fallback="none" />
   </head>
-  <body class="p-0 m-0 text-dark bg-white dark:bg-[var(--black)] dark:text-[var(--white-text)]">
+  <body class="p-0 m-0 text-dark bg-white dark:bg-(--black) dark:text-(--white-text)">
     <slot />
     <svg
       id="texture"

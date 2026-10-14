@@ -29,9 +29,9 @@ const tagColors = {
       <p class="text-right text-sm font-semibold">{date}</p>
     </div>
     <div
-      class="w-full sm:w-[420px] relative pl-4 pb-8 sm:pb-12 border-l-[1px] border-[rgba(34,36,44,.15)] dark:border-[rgba(236,237,238,.15)] before:bg-violet-500 before:border
+      class="w-full sm:w-[420px] relative pl-4 pb-8 sm:pb-12 border-l border-[rgba(34,36,44,.15)] dark:border-[rgba(236,237,238,.15)] before:bg-violet-500 before:border
     before:border-[rgba(236,237,238,.15)] before:block before:float-left before:size-[11px] before:absolute before:rounded-xl
-      before:left-[-6.5px] before:top-[-0.125rem]"
+      before:left-[-6.5px] before:-top-0.5"
     >
       <div class="relative">
         <a
@@ -47,7 +47,7 @@ const tagColors = {
               {
                 tags.map((tag) => (
                   <span
-                    class={`text-[11px] font-bold rounded-[9px] py-[1px] px-[6px] leading-[14px] relative ${tagColors[tag]}`}
+                    class={`text-[11px] font-bold rounded-[9px] py-px px-[6px] leading-[14px] relative ${tagColors[tag]}`}
                   >
                     {tag}
                   </span>
