@@ -4,8 +4,8 @@ export interface Timeline {
   'title-es': string
   'description-en': string
   'description-es': string
-  tags: ('certifications' | 'work')[]
-  image: string
+  tags: ('certifications' | 'work' | 'education')[]
+  image?: string
   link: string
 }
 
@@ -75,9 +75,9 @@ export const timelines: Timeline[] = [
     'title-en': 'First job in a company',
     'title-es': 'Primer trabajo en una empresa',
     'description-en':
-      'This is my current job in which I have the position of frontend development leader, and I develop web applications for the sales force for different companies; I work with React and Go.',
+      'At Celuweb I was the Full Stack Tech Lead until October 2024: I designed a modular platform with Clean Architecture for sales force and business management, mentored the frontend team and built key modules such as order and returns management, working with React and Go.',
     'description-es':
-      'Este es mi trabajo actual en el que tengo el cargo de líder de desarrollo frontend, y desarrollo aplicaciones web para la fuerza de ventas para diferentes empresas; trabajo con React y Go.',
+      'En Celuweb fui Líder Técnico Full Stack hasta octubre de 2024: diseñé una plataforma modular con Clean Architecture para fuerza de ventas y gestión empresarial, mentoricé al equipo de frontend y construí módulos clave como la gestión de pedidos y devoluciones, trabajando con React y Go.',
     tags: ['work'],
     image: '/timeline-6.webp',
     link: 'https://celuwebtech.com/'
@@ -143,6 +143,27 @@ export const timelines: Timeline[] = [
     link: 'https://platzi.com/p/rarojasf/curso/2357-golang-intermedio/diploma/detalle/'
   },
   {
+    date: 'Mar 1, 2023',
+    'title-en': 'Frontend Tech Lead at Tus Trámites VIP',
+    'title-es': 'Líder Técnico Frontend en Tus Trámites VIP',
+    'description-en':
+      'I led the frontend of a GovTech platform to digitize government procedures in Ecuador, supervising a team of two developers, defining the architecture and building the procedure management flow and the admin panel.',
+    'description-es':
+      'Lideré el frontend de una plataforma GovTech para digitalizar trámites gubernamentales en Ecuador, supervisando un equipo de dos desarrolladores, definiendo la arquitectura y construyendo la gestión de trámites y el panel administrativo.',
+    tags: ['work'],
+    image: '/project-2.webp',
+    link: 'https://www.linkedin.com/in/joan-rojas-mejia/'
+  },
+  {
+    date: 'Jun 1, 2024',
+    'title-en': 'Systems Engineering degree',
+    'title-es': 'Título de Ingeniería de Sistemas',
+    'description-en': 'I graduated as a Systems Engineer from Universidad del Quindío.',
+    'description-es': 'Me gradué como Ingeniero de Sistemas de la Universidad del Quindío.',
+    tags: ['education'],
+    link: 'https://www.linkedin.com/in/joan-rojas-mejia/details/education/'
+  },
+  {
     date: 'Oct 1, 2024',
     'title-es': 'Creación de páginas web con Astro',
     'title-en': 'Creating web pages with Astro',
@@ -159,9 +180,9 @@ export const timelines: Timeline[] = [
     'title-es': 'Llegada a Global66',
     'title-en': 'Arrival at Global66',
     'description-es':
-      'Ingreso a la empresa Global66, en la que tengo el cargo de Senior Frontend Developer, y desarrollo la aplicación movil de la fintech que globalizara el sistema financiero.',
+      'Ingreso a Global66 como Desarrollador Frontend Senior. Lidero el frontend de iniciativas core del negocio B2B: construí desde cero el Multienvío, reconstruí el onboarding de empresas con KYC y lectura de documentos con IA, y consolidé el Design System corporativo.',
     'description-en':
-      'Entry into the company Global66, where I hold the position of Senior Frontend Developer, and develop the mobile application of the fintech that will globalize the financial system.',
+      'I joined Global66 as a Senior Frontend Developer. I lead the frontend of core B2B initiatives: I built Multienvío (bulk transfers) from scratch, rebuilt the business onboarding with KYC and AI document reading, and consolidated the corporate Design System.',
     tags: ['work'],
     image: '/timeline-13.webp',
     link: 'https://global66.com/'
@@ -177,5 +198,27 @@ export const timelines: Timeline[] = [
     tags: ['certifications'],
     image: '/timeline-14.webp',
     link: 'https://www.udemy.com/certificate/UC-797a3823-b4e2-461a-873d-70da0eef4dd9/'
+  },
+  {
+    date: 'Nov 1, 2025',
+    'title-en': 'Intensive English',
+    'title-es': 'Inglés intensivo',
+    'description-en':
+      'I completed an intensive English program at Universidad Pedagógica de Colombia to work with international teams (B1 level).',
+    'description-es':
+      'Terminé un programa de inglés intensivo en la Universidad Pedagógica de Colombia para trabajar con equipos internacionales (nivel B1).',
+    tags: ['education'],
+    link: 'https://www.linkedin.com/in/joan-rojas-mejia/details/education/'
+  },
+  {
+    date: 'Jan 1, 2026',
+    'title-en': 'Economics at Universidad Jorge Tadeo Lozano',
+    'title-es': 'Economía en la Universidad Jorge Tadeo Lozano',
+    'description-en':
+      'I started a degree in Economics to strengthen the business side of my product vision.',
+    'description-es':
+      'Empecé la carrera de Economía para fortalecer la parte de negocio de mi visión de producto.',
+    tags: ['education'],
+    link: 'https://www.linkedin.com/in/joan-rojas-mejia/details/education/'
   }
 ]

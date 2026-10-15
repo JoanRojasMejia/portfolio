@@ -22,6 +22,48 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: '9',
+    'title-en': 'Global66 - Multienvío B2B',
+    'title-es': 'Global66 - Multienvío B2B',
+    'description-en': 'Create, validate and confirm multiple transfers in a single operation.',
+    'description-es': 'Crea, valida y confirma múltiples transferencias en una sola operación.',
+    image: '/timeline-13.webp',
+    images: [],
+    tags: ['Vue', 'Tailwindcss', 'TypeScript', 'Git'],
+    state: 'private',
+    year: '2024 - now',
+    'firstParagraph-en': `Multienvío is one of the core features of the Global66 B2B platform: it lets companies create, validate and confirm multiple
+      transfers in a single operation. I built its frontend from scratch, covering the complete flow, and led the visual and business-rule refactoring that
+      the platform needed to support it.`,
+    'firstParagraph-es': `El Multienvío es una de las funcionalidades core de la plataforma B2B de Global66: permite a las empresas crear, validar y confirmar
+      múltiples transferencias en una sola operación. Construí su frontend desde cero, cubriendo el flujo completo, y lideré la refactorización visual y de
+      reglas de negocio que la plataforma necesitaba para soportarlo.`,
+    'secondParagraph-en': `It was the most challenging project of my time at Global66 because of its complexity and deadlines. The result simplified bulk
+      payments for companies and directly improved the customer experience in the core product.`,
+    'secondParagraph-es': `Fue el proyecto más retador de mi paso por Global66 por su complejidad y plazos. El resultado simplificó los pagos masivos para
+      las empresas y mejoró de forma directa la experiencia del cliente en el producto core.`
+  },
+  {
+    id: '8',
+    'title-en': 'Global66 - Business onboarding',
+    'title-es': 'Global66 - Onboarding de empresas',
+    'description-en': 'B2B onboarding with KYC and AI reading of corporate documents.',
+    'description-es': 'Onboarding B2B con KYC y lectura con IA de documentos societarios.',
+    image: '/timeline-13.webp',
+    images: [],
+    tags: ['Vue', 'Tailwindcss', 'TypeScript', 'Git'],
+    state: 'private',
+    year: '2024 - now',
+    'firstParagraph-en': `I rebuilt the Global66 business (B2B) onboarding from scratch, contributing directly to the product definition: we reduced the
+      number of steps and simplified the flow so companies can register faster and with less friction.`,
+    'firstParagraph-es': `Reconstruí desde cero el onboarding de empresas (B2B) de Global66, con aporte directo en la definición de producto: redujimos el
+      número de pasos y simplificamos el flujo para que las empresas se registren más rápido y con menos fricción.`,
+    'secondParagraph-en': `I integrated identity verification (KYC) with Jumio for legal representatives and added AI reading of deeds and corporate
+      documents to autofill the company information, reducing friction and registration time.`,
+    'secondParagraph-es': `Integré la verificación de identidad (KYC) con Jumio para los representantes legales e incorporé lectura con IA de escrituras y
+      documentos societarios para autocompletar la información de la empresa, reduciendo la fricción y el tiempo de registro.`
+  },
+  {
     id: '7',
     'title-en': 'Global66 - Design system',
     'title-es': 'Global66 - Design system',
@@ -42,6 +84,12 @@ export const projects: Project[] = [
       digitales de la empresa. Incluye un conjunto completo de componentes reutilizables, pautas de diseño y mejores prácticas para el diseño UI/UX. El sistema fue construido
       utilizando Vue.js, un popular framework de JavaScript para construir interfaces de usuario, y Tailwind CSS, un framework CSS de utilidad que permite un estilo rápido y flexible.
       El sistema de diseño está diseñado para ser modular y escalable, lo que permite una fácil integración en proyectos existentes y futuros.`,
+    'secondParagraph-en': `I consolidated it as the corporate Design System: design tokens, accessibility guidelines and more than 12 documented components.
+      I took it from the B2C product to the B2B platform, refactoring legacy code and adding automated tests, which unified the visual identity and sped up
+      feature delivery across multiple teams.`,
+    'secondParagraph-es': `Lo consolidé como el Design System corporativo: tokens de diseño, guías de accesibilidad y más de 12 componentes documentados.
+      Lo llevé del producto B2C a la plataforma B2B, refactorizando código heredado y añadiendo pruebas automatizadas, lo que unificó la identidad visual y
+      aceleró la entrega de funcionalidades en múltiples equipos.`,
     link: 'https://github.com/Flash-Global66/global-design-system'
   },
   {
