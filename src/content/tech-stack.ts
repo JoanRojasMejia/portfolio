@@ -154,6 +154,15 @@ export const tools: TechnologyAndFramework[] = [
       'Es un editor de código versátil y ligero, ideal para desarrollar software y aplicaciones web modernas.'
   },
   {
+    name: 'Neovim',
+    logo: '/neovim.webp',
+    url: 'https://neovim.io/',
+    'description-en':
+      'It is an extensible, Vim-based text editor that runs in the terminal, focused on keyboard-driven editing and customization.',
+    'description-es':
+      'Es un editor de texto extensible basado en Vim que se usa desde la terminal, enfocado en la edición con el teclado y la personalización.'
+  },
+  {
     name: 'Git',
     logo: '/git.webp',
     url: 'https://git-scm.com/',
@@ -161,6 +170,33 @@ export const tools: TechnologyAndFramework[] = [
       'It is a distributed version control system, crucial for tracking and collaborating on software projects.',
     'description-es':
       'Es un sistema de control de versiones distribuido, crucial para el seguimiento y colaboración en proyectos de software.'
+  },
+  {
+    name: 'Herdr',
+    logo: '/herdr.webp',
+    url: 'https://herdr.dev/',
+    'description-en':
+      'It is an open-source terminal multiplexer for running several AI coding agents at once, showing whether each one is working, waiting or done.',
+    'description-es':
+      'Es un multiplexor de terminal open source para ejecutar varios agentes de IA de programación a la vez, mostrando si cada uno está trabajando, esperando o terminó.'
+  },
+  {
+    name: 'Claude',
+    logo: '/claude.webp',
+    url: 'https://claude.ai/',
+    'description-en':
+      'It is the AI assistant by Anthropic, which I use to write, review and understand code faster.',
+    'description-es':
+      'Es el asistente de IA de Anthropic, que uso para escribir, revisar y entender código más rápido.'
+  },
+  {
+    name: 'OpenAI',
+    logo: '/openai.webp',
+    url: 'https://openai.com/',
+    'description-en':
+      'It is the AI platform behind ChatGPT and its models, which I use to explore ideas and solve problems.',
+    'description-es':
+      'Es la plataforma de IA detrás de ChatGPT y sus modelos, que uso para explorar ideas y resolver problemas.'
   },
   {
     name: 'Apple music',
