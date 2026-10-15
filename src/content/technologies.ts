@@ -1,15 +1,19 @@
 import type { JSX, SVGProps } from 'react'
 import {
   Astrojs,
+  Claude,
   Docker,
   Git,
   Golang,
   Graphql,
+  Herdr,
   Javascript,
   Laravel,
   MongoDB,
+  Neovim,
   Nextjs,
   Nodejs,
+  OpenAI,
   Php,
   React,
   Sass,
@@ -138,5 +142,33 @@ export const technologies: Record<string, Technology> = {
     background: 'bg-red-300',
     color: 'text-red-900',
     order: 16
+  },
+  Neovim: {
+    title: 'Neovim',
+    Icon: Neovim,
+    background: 'bg-lime-300',
+    color: 'text-lime-900',
+    order: 17
+  },
+  Herdr: {
+    title: 'Herdr',
+    Icon: Herdr,
+    background: 'bg-stone-300',
+    color: 'text-stone-900',
+    order: 18
+  },
+  Claude: {
+    title: 'Claude',
+    Icon: Claude,
+    background: 'bg-orange-300',
+    color: 'text-orange-900',
+    order: 19
+  },
+  OpenAI: {
+    title: 'OpenAI',
+    Icon: OpenAI,
+    background: 'bg-zinc-300',
+    color: 'text-zinc-900',
+    order: 20
   }
 }
