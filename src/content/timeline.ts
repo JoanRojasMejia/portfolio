@@ -220,6 +220,7 @@ export const timelines: Timeline[] = [
     'description-es':
       'Empecé la carrera de Economía para fortalecer la parte de negocio de mi visión de producto.',
     tags: ['education'],
+    image: '/timeline-16.webp',
     link: 'https://www.linkedin.com/in/joan-rojas-mejia/details/education/'
   }
 ]
