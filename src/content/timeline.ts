@@ -200,14 +200,15 @@ export const timelines: Timeline[] = [
     link: 'https://www.udemy.com/certificate/UC-797a3823-b4e2-461a-873d-70da0eef4dd9/'
   },
   {
-    date: 'Nov 1, 2025',
-    'title-en': 'Intensive English',
-    'title-es': 'Inglés intensivo',
+    date: 'Nov 28, 2025',
+    'title-en': 'Academic English B2',
+    'title-es': 'Inglés académico nivel B2',
     'description-en':
-      'I completed an intensive English program at Universidad Pedagógica de Colombia to work with international teams (B1 level).',
+      'I completed the Academic English B2 program at the Language Center of Universidad Pedagógica Nacional, to work with international teams.',
     'description-es':
-      'Terminé un programa de inglés intensivo en la Universidad Pedagógica de Colombia para trabajar con equipos internacionales (nivel B1).',
+      'Terminé el programa de Conocimientos Académicos en Inglés nivel B2 del Centro de Lenguas de la Universidad Pedagógica Nacional, para trabajar con equipos internacionales.',
     tags: ['education'],
+    image: '/timeline-15.webp',
     link: 'https://www.linkedin.com/in/joan-rojas-mejia/details/education/'
   },
   {
