@@ -155,15 +155,6 @@ export const timelines: Timeline[] = [
     link: 'https://www.linkedin.com/in/joan-rojas-mejia/'
   },
   {
-    date: 'Jun 1, 2024',
-    'title-en': 'Systems Engineering degree',
-    'title-es': 'Título de Ingeniería de Sistemas',
-    'description-en': 'I graduated as a Systems Engineer from Universidad del Quindío.',
-    'description-es': 'Me gradué como Ingeniero de Sistemas de la Universidad del Quindío.',
-    tags: ['education'],
-    link: 'https://www.linkedin.com/in/joan-rojas-mejia/details/education/'
-  },
-  {
     date: 'Oct 1, 2024',
     'title-es': 'Creación de páginas web con Astro',
     'title-en': 'Creating web pages with Astro',
@@ -222,5 +213,17 @@ export const timelines: Timeline[] = [
     tags: ['education'],
     image: '/timeline-16.webp',
     link: 'https://www.linkedin.com/in/joan-rojas-mejia/details/education/'
+  },
+  {
+    date: 'Oct 5, 2026',
+    'title-en': 'Herdr: master the terminal and your agents',
+    'title-es': 'Herdr: domina la terminal y tus agentes',
+    'description-en':
+      'I completed the course "Herdr: master the terminal and your agents", to work more productively from the terminal alongside my agents.',
+    'description-es':
+      'Completé el curso "Herdr: domina la terminal y tus agentes", para trabajar de forma más productiva desde la terminal junto a mis agentes.',
+    tags: ['certifications'],
+    image: '/timeline-17.webp',
+    link: 'https://www.linkedin.com/in/joan-rojas-mejia/'
   }
 ]
